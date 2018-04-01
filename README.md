@@ -14,6 +14,7 @@ a good example on how to use extract date and extract numbers functions
  * "random year trivia"
  * "fact about number 666"
  * "math fact about number 5"
+ * "curiosity about year 1992"
  * "trivia about tomorrow"
  * "trivia about next week"
  * "fact about yesterday"
