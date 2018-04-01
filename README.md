@@ -1,0 +1,24 @@
+## Numbers
+Facts about numbers
+
+## Description
+
+facts about numbers, math, years and dates from https://numbersapi.com
+
+a good example on how to use extract date and extract numbers functions
+
+## Examples
+ * "random math fact"
+ * "random number trivia"
+ * "random date curiosity"
+ * "random year trivia"
+ * "fact about number 666"
+ * "math fact about number 5"
+ * "trivia about tomorrow"
+ * "trivia about next week"
+ * "fact about yesterday"
+ * "curiosity about march 13"
+
+## Credits
+JarbasAI
+
