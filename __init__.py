@@ -1,11 +1,10 @@
-from adapt.intent import IntentBuilder
-from mycroft import MycroftSkill, intent_handler
-from mycroft.util.parse import extractnumber, extract_datetime
-import sys
-if sys.version_info[0] < 3:
-    from urllib2 import urlopen
-else:
-    from urllib.request import urlopen
+from urllib.request import urlopen
+
+from lingua_franca.parse import extract_datetime
+from lingua_franca.parse import extract_number
+from ovos_workshop.decorators import intent_handler
+from ovos_workshop.intents import IntentBuilder
+from ovos_workshop.skills import OVOSSkill
 
 
 def year_trivia(n):
@@ -21,8 +20,7 @@ def number_math(n):
 
 
 def date_trivia(month, day):
-    return urlopen(
-            'http://numbersapi.com/%d/%d/date' % (month, day)).read()
+    return urlopen('http://numbersapi.com/%d/%d/date' % (month, day)).read()
 
 
 def random_trivia():
@@ -41,49 +39,45 @@ def random_date():
     return urlopen('http://numbersapi.com/random/date').read()
 
 
-class NumbersSkill(MycroftSkill):
-    def __init__(self):
-        MycroftSkill.__init__(self)
+class NumbersSkill(OVOSSkill):
 
-    @intent_handler(IntentBuilder("number_trivia").require(
-        'Numbers').require("fact").optionally("api").optionally("random"))
+    @intent_handler(
+        IntentBuilder("number_trivia").require('Numbers').require(
+            "fact").optionally("api").optionally("random"))
     def handle_numbers(self, message):
         random = message.data.get("random", False)
         number = None
         if not random:
             remainder = message.utterance_remainder()
-            lang = message.data.get("lang", self.lang)
-            number = extractnumber(remainder, lang)
+            number = extract_number(remainder, lang=self.lang)
         if number is not None:
             self.speak(number_trivia(number))
         else:
             self.speak(random_trivia())
 
-    @intent_handler(IntentBuilder("math_trivia").require(
-        'math').require("fact").optionally("api").optionally(
-        "random").optionally("number"))
+    @intent_handler(
+        IntentBuilder("math_trivia").require('math').require("fact").
+        optionally("api").optionally("random").optionally("number"))
     def handle_math(self, message):
         random = message.data.get("random", False)
         number = None
         if not random:
             remainder = message.utterance_remainder()
-            lang = message.data.get("lang", self.lang)
-            number = extractnumber(remainder, lang)
+            number = extract_number(remainder, lang=self.lang)
         if number:
             self.speak(number_math(number))
         else:
             self.speak(random_math())
 
-    @intent_handler(IntentBuilder("date_trivia").require(
-        'date_indicator').require("fact").optionally("api")
-        .optionally("random"))
+    @intent_handler(
+        IntentBuilder("date_trivia").require('date_indicator').require(
+            "fact").optionally("api").optionally("random"))
     def handle_date(self, message):
         random = message.data.get("random", False)
         date = None
         if not random:
             remainder = message.data["utterance"]
-            lang = message.data.get("lang", self.lang)
-            date = extract_datetime(remainder, lang=lang)
+            date = extract_datetime(remainder, lang=self.lang)
             self.log.info("extracted date: " + str(date[0]))
             self.log.info("utterance remainder: " + str(date[1]))
             date = date[0]
@@ -93,22 +87,17 @@ class NumbersSkill(MycroftSkill):
         else:
             self.speak(random_date())
 
-    @intent_handler(IntentBuilder("year_trivia").require(
-        'year').require("fact").optionally("api").optionally("random"))
+    @intent_handler(
+        IntentBuilder("year_trivia").require('year').require(
+            "fact").optionally("api").optionally("random"))
     def handle_year(self, message):
         random = message.data.get("random", False)
         number = None
         if not random:
             remainder = message.utterance_remainder()
-            lang = message.data.get("lang", self.lang)
-            number = extractnumber(remainder, lang)
+            number = extract_number(remainder, lang=self.lang)
 
         if number:
             self.speak(year_trivia(number))
         else:
             self.speak(random_year())
-
-
-def create_skill():
-    return NumbersSkill()
-
