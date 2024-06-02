@@ -41,7 +41,7 @@
     "número"
   ],
   "api.voc": [
-    "(número|números) (api|a p i)"
+    "(api|a p i) dos números"
   ],
   "random.voc": [
     "aleatório",
