@@ -1,7 +1,7 @@
 {
   "math.voc": [
     "matemática",
-    null,
+    "[UNUSED]",
     "matemático"
   ],
   "date_indicator.voc": [
@@ -46,7 +46,7 @@
   "random.voc": [
     "aleatório",
     "arbitrário",
-    null
+    "[UNUSED]"
   ],
   "fact.voc": [
     "facto",
