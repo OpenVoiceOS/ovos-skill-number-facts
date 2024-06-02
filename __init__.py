@@ -8,7 +8,7 @@ from ovos_workshop.skills import OVOSSkill
 
 
 def year_trivia(n):
-    return urlopen('http://numbersapi.com/%d/trivia' % n).read().decode("utf-8")
+    return urlopen('http://numbersapi.com/%d/year' % n).read().decode("utf-8")
 
 
 def number_trivia(n):
@@ -100,9 +100,11 @@ class NumbersSkill(OVOSSkill):
 
 
 if __name__ == "__main__":
+    from ovos_config.locale import setup_locale
     from ovos_utils.fakebus import FakeBus
     from ovos_bus_client.message import Message
 
+    setup_locale()
 
     # print speak for debugging
     def spk(utt, *args, **kwargs):
@@ -112,7 +114,7 @@ if __name__ == "__main__":
     s = NumbersSkill(skill_id="fake.test", bus=FakeBus())
     s.speak = spk
 
-    s.handle_year(Message("", {"random": True}))
-    s.handle_date(Message("", {"random": True}))
+    s.handle_year(Message("", {"utterance": "fact about the year 1992"}))
+    s.handle_date(Message("", {"utterance": "fact about month of december"}))
     s.handle_math(Message("", {"random": True}))
-    s.handle_numbers(Message("", {"random": True}))
+    s.handle_numbers(Message("", {"utterance": "fact about number six hundred sixty six"}))
