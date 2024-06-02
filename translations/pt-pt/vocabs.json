@@ -1,0 +1,56 @@
+{
+  "math.voc": [
+    "matemática",
+    "[UNUSED]",
+    "matemático"
+  ],
+  "date_indicator.voc": [
+    "data",
+    "hoje",
+    "amanhã",
+    "ontem",
+    "dia",
+    "segunda-feira",
+    "terça-feira",
+    "quarta-feira",
+    "quinta-feira",
+    "sexta-feira",
+    "sábado",
+    "Domingo",
+    "janeiro",
+    "fevereiro",
+    "marchar",
+    "abril",
+    "poderia",
+    "junho",
+    "julho",
+    "agosto",
+    "setembro",
+    "Outubro",
+    "novembro",
+    "dezembro",
+    "semana",
+    "fim de semana"
+  ],
+  "year.voc": [
+    "ano",
+    "anos"
+  ],
+  "Numbers.voc": [
+    "números",
+    "número"
+  ],
+  "api.voc": [
+    "(número|números) (api|a p i)"
+  ],
+  "random.voc": [
+    "aleatório",
+    "arbitrário",
+    "[UNUSED]"
+  ],
+  "fact.voc": [
+    "facto",
+    "curiosidade",
+    "curiosidades"
+  ]
+}
