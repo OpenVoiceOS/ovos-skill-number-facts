@@ -6,7 +6,7 @@ from os import walk
 # Define package information
 SKILL_CLAZZ = "NumbersSkill"  # Make sure it matches __init__.py class name
 VERSION = "0.0.1"
-URL = "https://github.com/OVOSHatchery/ovos-skill-numbers"
+URL = "https://github.com/OVOSHatchery/ovos-skill-number-facts"
 AUTHOR = "OpenVoiceOS"
 EMAIL = "jarbasai@mailfence.com"
 LICENSE = "Apache2.0"
