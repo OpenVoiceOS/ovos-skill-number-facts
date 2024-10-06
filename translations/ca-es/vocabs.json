@@ -1,0 +1,56 @@
+{
+  "math.voc": [
+    "matemàtiques",
+    "matemàtics",
+    "matemàtic"
+  ],
+  "date_indicator.voc": [
+    "data",
+    "avui",
+    "demà",
+    "ahir",
+    "dia",
+    "dilluns",
+    "dimarts",
+    "dimecres",
+    "dijous",
+    "divendres",
+    "dissabte",
+    "diumenge",
+    "gener",
+    "febrer",
+    "març",
+    "abril",
+    "maig",
+    "juny",
+    "juliol",
+    "agost",
+    "setembre",
+    "octubre",
+    "novembre",
+    "desembre",
+    "setmana",
+    "cap de setmana"
+  ],
+  "year.voc": [
+    "any",
+    "anys"
+  ],
+  "Numbers.voc": [
+    "(números|nombres)",
+    "(número|nombre)"
+  ],
+  "api.voc": [
+    "(nombre|nombres|número|números) (api|a p i)"
+  ],
+  "random.voc": [
+    "aleatori",
+    "arbitrari",
+    "aleatori"
+  ],
+  "fact.voc": [
+    "fet",
+    "curiositat",
+    "trívia"
+  ]
+}
