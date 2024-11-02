@@ -41,7 +41,7 @@
     "antal"
   ],
   "api.voc": [
-    null
+    "(tal|nummer|numrer) (api|a p i)"
   ],
   "random.voc": [
     "tilfældig",
@@ -49,7 +49,7 @@
     "aleatorisk"
   ],
   "fact.voc": [
-    null,
+    "fakta",
     "nysgerrighed",
     "trivia"
   ]
