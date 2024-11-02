@@ -1,0 +1,56 @@
+{
+  "math.voc": [
+    "matematik",
+    "matematik",
+    "matematisk"
+  ],
+  "date_indicator.voc": [
+    "dato",
+    "i dag",
+    "i morgen",
+    "i går",
+    "dag",
+    "mandag",
+    "tirsdag",
+    "onsdag",
+    "torsdag",
+    "fredag",
+    "lørdag",
+    "søndag",
+    "januar",
+    "februar",
+    "marts",
+    "april",
+    "maj",
+    "juni",
+    "juli",
+    "august",
+    "september",
+    "oktober",
+    "november",
+    "december",
+    "uge",
+    "weekend"
+  ],
+  "year.voc": [
+    "år",
+    "år"
+  ],
+  "Numbers.voc": [
+    "tal",
+    "antal"
+  ],
+  "api.voc": [
+    null
+  ],
+  "random.voc": [
+    "tilfældig",
+    "vilkårlig",
+    "aleatorisk"
+  ],
+  "fact.voc": [
+    null,
+    "nysgerrighed",
+    "trivia"
+  ]
+}
