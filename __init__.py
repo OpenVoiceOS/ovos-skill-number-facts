@@ -1,7 +1,8 @@
 from urllib.request import urlopen
 
-from lingua_franca.parse import extract_datetime
-from lingua_franca.parse import extract_number
+from ovos_date_parser import extract_datetime
+from ovos_number_parser import extract_number
+from ovos_utils.time import now_local
 from ovos_workshop.decorators import intent_handler
 from ovos_workshop.intents import IntentBuilder
 from ovos_workshop.skills import OVOSSkill
@@ -74,7 +75,7 @@ class NumbersSkill(OVOSSkill):
         random = message.data.get("random")
         date = None
         if not random:
-            date = extract_datetime(message.data["utterance"], lang=self.lang)
+            date = extract_datetime(message.data["utterance"], anchorDate=now_local(), lang=self.lang)
             self.log.info("extracted date: " + str(date[0]))
             self.log.info("utterance remainder: " + str(date[1]))
             date = date[0]
@@ -105,6 +106,7 @@ if __name__ == "__main__":
     from ovos_bus_client.message import Message
 
     setup_locale()
+
 
     # print speak for debugging
     def spk(utt, *args, **kwargs):
