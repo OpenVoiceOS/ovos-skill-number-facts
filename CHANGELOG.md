@@ -1,16 +1,16 @@
 # Changelog
 
-## [0.1.4a1](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.4a1) (2024-11-15)
+## [0.1.5a1](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.5a1) (2024-11-19)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/V0.1.3...0.1.4a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/V0.1.4...0.1.5a1)
 
 **Merged pull requests:**
 
-- fix: skill json [\#11](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/11) ([JarbasAl](https://github.com/JarbasAl))
+- fix:allow workshop 3.0.0 [\#13](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/13) ([JarbasAl](https://github.com/JarbasAl))
 
-## [V0.1.3](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/V0.1.3) (2024-11-11)
+## [V0.1.4](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/V0.1.4) (2024-11-15)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.3...V0.1.3)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.4...V0.1.4)
 
 
 
