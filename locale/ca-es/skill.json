@@ -1,0 +1,18 @@
+{
+  "skill_id": "ovos-skill-number-facts.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-number-facts",
+  "name": "Nombres",
+  "description": "Fets sobre els nombres",
+  "examples": [
+    "un fet matemàtic sobre el nombre 7",
+    "fet sobre el nombre 666",
+    "preguntes aletòries de nombres",
+    "fet sobre ahir",
+    "curiositat sobre l'any 1992",
+    "preguntes sobre la setmana vinent",
+    "preguntes sobre demà"
+  ],
+  "tags": [
+    "Preguntes"
+  ]
+}
