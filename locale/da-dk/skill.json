@@ -1,6 +1,7 @@
 {
   "skill_id": "ovos-skill-number-facts.openvoiceos",
   "source": "https://github.com/OpenVoiceOS/ovos-skill-number-facts",
+  "name": "Numbers",
   "description": "Fakta om tal",
   "examples": [
     "matematisk fakta om nummer 7",
