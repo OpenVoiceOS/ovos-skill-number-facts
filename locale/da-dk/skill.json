@@ -1,0 +1,18 @@
+{
+  "skill_id": "ovos-skill-number-facts.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-number-facts",
+  "name": "Numbers",
+  "description": "Fakta om tal",
+  "examples": [
+    "matematisk fakta om nummer 7",
+    "fakta om nummer 666",
+    "trivia tilfældigt tal",
+    "fakta om i går",
+    "nysgerrighed om år 1992",
+    "trivia om næste uge",
+    "trivia om i morgen"
+  ],
+  "tags": [
+    "Trivia"
+  ]
+}
