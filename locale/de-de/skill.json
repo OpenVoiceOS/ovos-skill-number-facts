@@ -1,0 +1,18 @@
+{
+  "skill_id": "ovos-skill-number-facts.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-number-facts",
+  "name": "Zahlen",
+  "description": "Fakten über Zahlen",
+  "examples": [
+    "mathematischer Fakt über die Zahl 7",
+    "Fakt über die Zahl 666",
+    "Wissenswertes über Zufallszahlen",
+    "Fakt über gestern",
+    "Neugier auf das Jahr 1992",
+    "Wissenswertes über nächste Woche",
+    "Wissenswertes über morgen"
+  ],
+  "tags": [
+    "Wissenswertes"
+  ]
+}
