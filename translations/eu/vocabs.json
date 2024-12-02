@@ -1,0 +1,68 @@
+{
+    "math.voc": [
+        "matematika",
+        "matematiko",
+        "matematika"
+    ],
+    "date_indicator.voc": [
+        "ostiral",
+        "astelehen",
+        "larunbat",
+        "igande",
+        "ostegun",
+        "astearte",
+        "asteazken",
+        "asteburu",
+        "apiril",
+        "abuztu",
+        "data",
+        "egun",
+        "abendu",
+        "otsail",
+        "urtarril",
+        "uztail",
+        "ekain",
+        "martxo",
+        "maiatz",
+        "azaro",
+        "urri",
+        "irail",
+        "gaur",
+        "bihar",
+        "aste",
+        "atzo",
+        "apiril",
+        "abuztu",
+        "abendu",
+        "otsail",
+        "urtarril",
+        "uztail",
+        "ekain",
+        "martxo",
+        "maiatz",
+        "azaro",
+        "urri",
+        "irail"
+    ],
+    "year.voc": [
+        "urte",
+        "urteak"
+    ],
+    "Numbers.voc": [
+        "zenbaki",
+        "zenbakiak"
+    ],
+    "api.voc": [
+        "(zenbaki|zenbakiak) (api|a p i)"
+    ],
+    "random.voc": [
+        "ausazko",
+        "hautazko",
+        "ausazko"
+    ],
+    "fact.voc": [
+        "jakin-min",
+        "egia|gertakari",
+        "huskeria"
+    ]
+}
