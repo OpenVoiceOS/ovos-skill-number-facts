@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.12a6](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.12a6) (2025-12-21)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.12a5...0.1.12a6)
+
+**Merged pull requests:**
+
+- Update dependency ovos-workshop to v8 [\#39](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/39) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [0.1.12a5](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.12a5) (2025-12-20)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.12a3...0.1.12a5)
