@@ -1,0 +1,18 @@
+{
+  "skill_id": "ovos-skill-number-facts.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-number-facts",
+  "name": "Nombres",
+  "description": "Des faits et anecdotes sur les nombres",
+  "examples": [
+    "un fait mathématique sur le nombre 7",
+    "une anecdote sur le nombre 666",
+    "une trivia aléatoire sur un nombre",
+    "un fait sur hier",
+    "une anecdote sur l'année 1992",
+    "une trivia sur la semaine prochaine",
+    "une trivia sur demain"
+  ],
+  "tags": [
+    "Trivia"
+  ]
+}
