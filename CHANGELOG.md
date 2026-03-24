@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.1.13a1](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.13a1) (2026-03-24)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.12a8...0.1.13a1)
+
+**Merged pull requests:**
+
+- fix: rename bare lang code locale directories [\#46](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/46) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- Add fr-fr locale [\#45](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/45) ([goldyfruit](https://github.com/goldyfruit))
+- Update actions/setup-python action to v6 [\#38](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/38) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/checkout action to v6 [\#35](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/35) ([renovate[bot]](https://github.com/apps/renovate))
+
+## [0.1.12a8](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.12a8) (2026-01-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.12a7...0.1.12a8)
+
 ## [0.1.12a7](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.12a7) (2026-01-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.12a6...0.1.12a7)
