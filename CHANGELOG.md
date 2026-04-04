@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.13a2](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.13a2) (2026-04-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.13a1...0.1.13a2)
+
+**Merged pull requests:**
+
+- ci: modernize GitHub workflows [\#50](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/50) ([JarbasAl](https://github.com/JarbasAl))
+- fix\(i18n\): normalize locale folders to canonical BCP-47 [\#49](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/49) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.13a1](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.13a1) (2026-03-24)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.12a8...0.1.13a1)
