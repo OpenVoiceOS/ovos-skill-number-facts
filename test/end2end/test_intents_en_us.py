@@ -26,7 +26,8 @@ class _IntentRoutingMixin:
             cls.minicroft.stop()
 
 
-    def _assert_adapt(self, utterance: str, __intent_name: str = ''):
+    def _assert_adapt(self, utterance: str, intent_label: str = ''):
+        intent_msg_type = f"{SKILL_ID}:{intent_label}" if intent_label else None
         session = Session(f"e2e-en_us-adapt-{hash(utterance)}")
         session.lang = LANG
         session.pipeline = [
@@ -39,13 +40,27 @@ class _IntentRoutingMixin:
             {"utterances": [utterance], "lang": LANG},
             {"session": session.serialize()},
         )
+        activation_points = [intent_msg_type] if intent_msg_type else []
+        expected = [
+            message,
+            Message(f"{SKILL_ID}.activate", {}, {"skill_id": SKILL_ID}),
+            Message("mycroft.skill.handler.start", {}, {"skill_id": SKILL_ID}),
+            Message("mycroft.skill.handler.complete", {}, {"skill_id": SKILL_ID}),
+            Message("ovos.utterance.handled", {}, {"skill_id": SKILL_ID}),
+        ]
+        if intent_msg_type:
+            expected.insert(2, Message(intent_msg_type, {}, {"skill_id": SKILL_ID}))
         test = End2EndTest(
             minicroft=self.minicroft,
             skill_ids=[SKILL_ID],
             eof_msgs=["ovos.utterance.handled"],
             flip_points=["recognizer_loop:utterance"],
             source_message=message,
-            expected_messages=["speak"],
+            activation_points=activation_points,
+            test_msg_context=False,
+            test_message_number=False,
+            ignore_messages=["speak", "mycroft.audio.play_sound"],
+            expected_messages=expected,
         )
         test.execute(timeout=30)
 
@@ -58,8 +73,8 @@ class TestAdapt1_Number_trivia(_IntentRoutingMixin, TestCase):
     def test_curiosity_number_aleatory(self):
         self._assert_adapt(r"curiosity number aleatory", r"number_trivia")
 
-    def test_curiosity_number_number_numbers_api_a_p_(self):
-        self._assert_adapt(r"curiosity number (number|numbers) (api|a p i)", r"number_trivia")
+    def test_curiosity_number_api(self):
+        self._assert_adapt(r"curiosity number numbers api", r"number_trivia")
 
 class TestAdapt2_Math_trivia(_IntentRoutingMixin, TestCase):
     """Adapt intent: math_trivia"""
@@ -69,8 +84,8 @@ class TestAdapt2_Math_trivia(_IntentRoutingMixin, TestCase):
     def test_curiosity_math_aleatory(self):
         self._assert_adapt(r"curiosity math aleatory", r"math_trivia")
 
-    def test_curiosity_math_number_numbers_api_a_p_i(self):
-        self._assert_adapt(r"curiosity math (number|numbers) (api|a p i)", r"math_trivia")
+    def test_curiosity_math_api(self):
+        self._assert_adapt(r"curiosity math numbers api", r"math_trivia")
 
 class TestAdapt3_Date_trivia(_IntentRoutingMixin, TestCase):
     """Adapt intent: date_trivia"""
@@ -80,8 +95,8 @@ class TestAdapt3_Date_trivia(_IntentRoutingMixin, TestCase):
     def test_curiosity_april_aleatory(self):
         self._assert_adapt(r"curiosity april aleatory", r"date_trivia")
 
-    def test_curiosity_april_number_numbers_api_a_p_i(self):
-        self._assert_adapt(r"curiosity april (number|numbers) (api|a p i)", r"date_trivia")
+    def test_curiosity_april_api(self):
+        self._assert_adapt(r"curiosity april numbers api", r"date_trivia")
 
 class TestAdapt4_Year_trivia(_IntentRoutingMixin, TestCase):
     """Adapt intent: year_trivia"""
@@ -91,5 +106,5 @@ class TestAdapt4_Year_trivia(_IntentRoutingMixin, TestCase):
     def test_curiosity_year_aleatory(self):
         self._assert_adapt(r"curiosity year aleatory", r"year_trivia")
 
-    def test_curiosity_year_number_numbers_api_a_p_i(self):
-        self._assert_adapt(r"curiosity year (number|numbers) (api|a p i)", r"year_trivia")
+    def test_curiosity_year_api(self):
+        self._assert_adapt(r"curiosity year numbers api", r"year_trivia")
