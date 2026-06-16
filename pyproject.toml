@@ -30,7 +30,7 @@ test = [
 [project.urls]
 Homepage = "https://github.com/OpenVoiceOS/ovos-skill-number-facts"
 
-[project.entry-points."ovos.plugin.skill"]
+[project.entry-points."opm.skill"]
 "ovos-skill-number-facts.openvoiceos" = "ovos_skill_number_facts:NumbersSkill"
 
 [tool.setuptools.dynamic]
