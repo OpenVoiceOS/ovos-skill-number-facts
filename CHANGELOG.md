@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.13a6](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.13a6) (2026-08-01)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.13a5...0.1.13a6)
+
+**Merged pull requests:**
+
+- docs: rewrite README in Simplified Technical English [\#61](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/61) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.13a5](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.13a5) (2026-07-12)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.13a4...0.1.13a5)
