@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.13a8](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.13a8) (2026-08-12)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.13a7...0.1.13a8)
+
+**Merged pull requests:**
+
+- test: add golden-utterance e2e suite for en-US [\#64](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/64) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.13a7](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.13a7) (2026-08-10)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.13a6...0.1.13a7)
