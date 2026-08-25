@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.1.13a9](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.13a9) (2026-08-25)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.13a8...0.1.13a9)
+
+**Merged pull requests:**
+
+- translate\(kab-DZ\): update Numbers.voc [\#72](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/72) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(kab-DZ\): update math.voc [\#70](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/70) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(kab-DZ\): update random.voc [\#69](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/69) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(kab-DZ\): update year.voc [\#68](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/68) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(kab-DZ\): update year.voc [\#67](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/67) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(kab-DZ\): update date\_indicator.voc [\#66](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/66) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
 ## [0.1.13a8](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.13a8) (2026-08-12)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.13a7...0.1.13a8)
@@ -91,19 +104,19 @@
 
 ## [0.1.12a5](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.12a5) (2025-12-20)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.12a3...0.1.12a5)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.12a4...0.1.12a5)
 
 **Merged pull requests:**
 
 - Configure Renovate [\#33](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/33) ([renovate[bot]](https://github.com/apps/renovate))
 
-## [0.1.12a3](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.12a3) (2025-11-21)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.12a4...0.1.12a3)
-
 ## [0.1.12a4](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.12a4) (2025-11-21)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.12...0.1.12a4)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.12a3...0.1.12a4)
+
+## [0.1.12a3](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.12a3) (2025-11-21)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.12...0.1.12a3)
 
 **Merged pull requests:**
 
