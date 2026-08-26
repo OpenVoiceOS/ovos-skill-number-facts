@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.14a2](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.14a2) (2026-08-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.14a1...0.1.14a2)
+
+**Merged pull requests:**
+
+- translate\(kab\): update api.voc [\#77](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/77) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
 ## [0.1.14a1](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.14a1) (2026-08-26)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.13a10...0.1.14a1)
