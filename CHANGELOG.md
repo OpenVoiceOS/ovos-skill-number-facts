@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.13a10](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.13a10) (2026-08-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.13a9...0.1.13a10)
+
+**Merged pull requests:**
+
+- translate\(kab-DZ\): update date\_indicator.voc [\#71](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/71) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
 ## [0.1.13a9](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.13a9) (2026-08-25)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.13a8...0.1.13a9)
