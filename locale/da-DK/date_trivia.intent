@@ -1,0 +1,3 @@
+[fortæl mig] (fakta|et faktum|trivia) om (i dag|i morgen|i går|weekenden)
+(fakta|et faktum) om (datoen|dagen) {date}
+(fakta|et faktum) om (januar|februar|marts|april|maj|juni|juli|august|september|oktober|november|december) {date}

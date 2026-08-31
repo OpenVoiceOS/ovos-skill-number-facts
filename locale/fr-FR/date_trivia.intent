@@ -1,0 +1,3 @@
+[donne-moi] (un fait|une anecdote) (d'aujourd'hui|de demain|d'hier|du week-end)
+(fait|anecdote) (de la date|du jour) {date}
+(fait|anecdote) (de janvier|de février|de mars|d'avril|de mai|de juin|de juillet|d'août|de septembre|d'octobre|de novembre|de décembre) {date}

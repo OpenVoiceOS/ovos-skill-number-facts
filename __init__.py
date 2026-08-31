@@ -4,7 +4,6 @@ from ovos_date_parser import extract_datetime
 from ovos_number_parser import extract_number
 from ovos_utils.time import now_local
 from ovos_workshop.decorators import intent_handler
-from ovos_workshop.intents import IntentBuilder
 from ovos_workshop.skills import OVOSSkill
 
 
@@ -42,9 +41,7 @@ def random_date():
 
 class NumbersSkill(OVOSSkill):
 
-    @intent_handler(
-        IntentBuilder("number_trivia").require('Numbers').require(
-            "fact").optionally("api").optionally("random"))
+    @intent_handler("number_trivia.intent")
     def handle_numbers(self, message):
         random = message.data.get("random")
         number = None
@@ -55,9 +52,7 @@ class NumbersSkill(OVOSSkill):
         else:
             self.speak(random_trivia())
 
-    @intent_handler(
-        IntentBuilder("math_trivia").require('math').require("fact").
-        optionally("api").optionally("random").optionally("number"))
+    @intent_handler("math_trivia.intent")
     def handle_math(self, message):
         random = message.data.get("random")
         number = None
@@ -68,9 +63,7 @@ class NumbersSkill(OVOSSkill):
         else:
             self.speak(random_math())
 
-    @intent_handler(
-        IntentBuilder("date_trivia").require('date_indicator').require(
-            "fact").optionally("api").optionally("random"))
+    @intent_handler("date_trivia.intent")
     def handle_date(self, message):
         random = message.data.get("random")
         date = None
@@ -85,9 +78,7 @@ class NumbersSkill(OVOSSkill):
         else:
             self.speak(random_date())
 
-    @intent_handler(
-        IntentBuilder("year_trivia").require('year').require(
-            "fact").optionally("api").optionally("random"))
+    @intent_handler("year_trivia.intent")
     def handle_year(self, message):
         random = message.data.get("random")
         number = None
