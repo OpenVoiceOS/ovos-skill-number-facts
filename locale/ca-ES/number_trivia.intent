@@ -1,0 +1,4 @@
+[digues-me] (una curiositat|un fet|una trívia) sobre el (número|nombre) {number}
+(curiositat|fet) [aleatori] (del|sobre el) (número|nombre) {number}
+(curiositat|trívia) de (números|nombres)
+[digues-me] (una curiositat|un fet) sobre els números

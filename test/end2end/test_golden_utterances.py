@@ -35,7 +35,7 @@ from pathlib import Path  # noqa: E402
 import pytest  # noqa: E402
 from ovos_bus_client.message import Message  # noqa: E402
 from ovos_bus_client.session import Session  # noqa: E402
-from ovoscope import CaptureSession, get_minicroft, ADAPT_PIPELINE  # noqa: E402
+from ovoscope import CaptureSession, get_minicroft, PADACIOSO_PIPELINE  # noqa: E402
 
 SKILL_ID = "ovos-skill-number-facts.openvoiceos"
 LANG = "en-US"
@@ -60,8 +60,8 @@ def _candidates(skill_id: str, intent_label: str) -> set:
     """padatious/padacioso plugin versions register the matched-intent bus
     event under different normalizations of the ``.intent`` filename
     basename -- candidates cover both the suffixed and unsuffixed forms.
-    Adapt intent names (eg. "number_trivia") have no ``.intent`` suffix
-    to strip."""
+    Plain intent names (eg. a legacy Adapt registration) have no ``.intent``
+    suffix to strip."""
     base = intent_label[:-len(".intent")] if intent_label.endswith(".intent") else intent_label
     return {f"{skill_id}:{intent_label}", f"{skill_id}:{base}"}
 
@@ -93,7 +93,7 @@ def minicroft():
 def _types(mc, text, session_id):
     session = Session(session_id)
     session.lang = LANG
-    session.pipeline = ADAPT_PIPELINE
+    session.pipeline = PADACIOSO_PIPELINE
     utterance = Message(
         "recognizer_loop:utterance",
         {"utterances": [text], "lang": LANG},

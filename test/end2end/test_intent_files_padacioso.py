@@ -1,28 +1,19 @@
-"""End-to-end intent-routing tests for ovos-skill-number-facts (en-US).
+"""Regression coverage proving number-facts' intents are registered as
+``.intent`` files (padacioso/padatious pipeline) and not only as Adapt
+``IntentBuilder`` requirements.
 
-These assert *per-utterance* that the padacioso (``.intent`` file) pipeline
-routes an utterance to the right trivia handler and that the skill speaks the
-fact back. They deliberately
-use subset assertions over the captured message stream rather than a strict
-full-sequence match: the exact ordered sequence drifts across ovos-core /
-ovoscope releases (e.g. an extra ``ovos.intent.matched`` message, or ``speak``
-vs ``ovos.utterance.speak``), which is orthogonal to what this skill is
-responsible for.
-
-The skill fetches facts from ``numbersapi.com`` over the network. The suite
-patches those module-level fetchers with deterministic stubs *before* the
-MiniCroft loads the skill, so the tests exercise pure intent routing without a
-network dependency and stay fast and reproducible.
+The four trivia intents were migrated off Adapt onto keyword-free
+``.intent`` templates; this suite drives the padacioso pipeline directly
+(no Adapt pipeline in the mix) to confirm each intent is still reachable
+without Adapt.
 
 Run:
-    uv run pytest test/end2end/ -v
+    uv run pytest test/end2end/test_intent_files_padacioso.py -v
 """
 from unittest import TestCase
 
 import ovos_skill_number_facts as _skill_module
 
-# Deterministic, network-free fact fetchers. Each category returns a distinct
-# sentinel so the spoken-response assertions can tell the handlers apart.
 _STUBS = {
     "number_trivia": "NUMBER_FACT",
     "random_trivia": "NUMBER_FACT",
@@ -49,7 +40,7 @@ LANG = "en-US"
 
 
 def _session(tag: str) -> Session:
-    session = Session(f"e2e-en_us-numfacts-{tag}")
+    session = Session(f"e2e-padacioso-numfacts-{tag}")
     session.lang = LANG
     session.pipeline = PADACIOSO_PIPELINE
     return session
@@ -63,8 +54,8 @@ def _utterance(utt: str, session: Session) -> Message:
     )
 
 
-class _TriviaRoutingMixin:
-    """Shared MiniCroft wiring for the number-facts skill."""
+class TestTriviaRoutingWithoutAdapt(TestCase):
+    """Adapt-less pipeline coverage for the four trivia intents."""
 
     @classmethod
     def setUpClass(cls):
@@ -94,8 +85,8 @@ class _TriviaRoutingMixin:
         types = [m.msg_type for m in messages]
         self.assertIn(
             intent, types,
-            f"expected {intent!r} to be matched for {utterance!r}, "
-            f"got {types}",
+            f"expected {intent!r} to be matched for {utterance!r} on the "
+            f"padacioso (adapt-less) pipeline, got {types}",
         )
         spoken = self._spoken(messages)
         self.assertTrue(
@@ -104,36 +95,16 @@ class _TriviaRoutingMixin:
             f"{utterance!r}, got {spoken}",
         )
 
-
-class TestNumberTrivia(_TriviaRoutingMixin, TestCase):
-    """number_trivia routing across phrasings."""
-
     def test_number_fact(self):
-        self.assertRoutesTo("tell me a number fact", "number_trivia", "NUMBER_FACT")
-
-    def test_random_number_fact(self):
-        self.assertRoutesTo("random number fact", "number_trivia", "NUMBER_FACT")
-
-    def test_give_me_a_fact_about_numbers(self):
-        self.assertRoutesTo("give me a fact about numbers", "number_trivia", "NUMBER_FACT")
-
-
-class TestMathTrivia(_TriviaRoutingMixin, TestCase):
-    """math_trivia routing."""
+        self.assertRoutesTo(
+            "give me a fact about the number 42", "number_trivia", "NUMBER_FACT")
 
     def test_math_fact(self):
         self.assertRoutesTo("give me a math fact", "math_trivia", "MATH_FACT")
 
-
-class TestDateTrivia(_TriviaRoutingMixin, TestCase):
-    """date_trivia routing."""
-
     def test_date_fact(self):
-        self.assertRoutesTo("fact about december 3", "date_trivia", "DATE_FACT")
-
-
-class TestYearTrivia(_TriviaRoutingMixin, TestCase):
-    """year_trivia routing."""
+        self.assertRoutesTo("fact about today", "date_trivia", "DATE_FACT")
 
     def test_year_fact(self):
-        self.assertRoutesTo("fact about the year 1992", "year_trivia", "YEAR_FACT")
+        self.assertRoutesTo(
+            "fact about the year 1969", "year_trivia", "YEAR_FACT")

@@ -1,0 +1,3 @@
+[nenne mir] (eine Tatsache|Wissenswertes) über (heute|morgen|gestern|das Wochenende)
+(Tatsache|Wissenswertes) über (das Datum|den Tag) {date}
+(Tatsache|Wissenswertes) über den (Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember) {date}

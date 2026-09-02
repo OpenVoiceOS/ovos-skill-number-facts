@@ -1,0 +1,3 @@
+[dime] (una curiosidad|un hecho) (de hoy|de mañana|de ayer|del fin de semana)
+(curiosidad|hecho) (de la fecha|del día) {date}
+(curiosidad|hecho) (de enero|de febrero|de marzo|de abril|de mayo|de junio|de julio|de agosto|de septiembre|de octubre|de noviembre|de diciembre) {date}
