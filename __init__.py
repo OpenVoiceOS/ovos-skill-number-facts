@@ -47,7 +47,7 @@ class NumbersSkill(OVOSSkill):
         number = None
         if not random:
             number = extract_number(message.data["utterance"], lang=self.lang)
-        if number is not None:
+        if number:
             self.speak(number_trivia(number))
         else:
             if not random:
@@ -70,10 +70,11 @@ class NumbersSkill(OVOSSkill):
         random = message.data.get("random")
         date = None
         if not random:
-            date = extract_datetime(message.data["utterance"], anchorDate=now_local(), lang=self.lang)
-            self.log.info("extracted date: " + str(date[0]))
-            self.log.info("utterance remainder: " + str(date[1]))
-            date = date[0]
+            extracted = extract_datetime(message.data["utterance"], anchorDate=now_local(), lang=self.lang)
+            if extracted:
+                self.log.info("extracted date: " + str(extracted[0]))
+                self.log.info("utterance remainder: " + str(extracted[1]))
+                date = extracted[0]
 
         if date:
             self.speak(date_trivia(date.month, date.day))
