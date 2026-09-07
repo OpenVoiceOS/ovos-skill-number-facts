@@ -1,0 +1,4 @@
+[me diga] (uma curiosidade|um fato) [aleatório] sobre o número {number}
+[me diga] [uma] curiosidade [aleatória] sobre números
+(curiosidade|fato) [aleatório] (do|sobre o) número {number}
+curiosidade sobre números
