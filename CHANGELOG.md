@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0a2](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.3.0a2) (2026-09-07)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.3.0a1...0.3.0a2)
+
+**Merged pull requests:**
+
+- Update dependency pytest to v9 [\#57](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/57) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [0.3.0a1](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.3.0a1) (2026-09-07)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.2.0a1...0.3.0a1)
