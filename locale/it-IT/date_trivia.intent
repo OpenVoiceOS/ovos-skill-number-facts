@@ -1,0 +1,3 @@
+[dimmi] (una curiosità|un fatto) (di oggi|di domani|di ieri|del fine settimana)
+(curiosità|fatto) (sulla data|sul giorno) {date}
+(curiosità|fatto) (di gennaio|di febbraio|di marzo|di aprile|di maggio|di giugno|di luglio|di agosto|di settembre|di ottobre|di novembre|di dicembre) {date}

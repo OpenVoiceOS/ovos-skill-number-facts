@@ -1,0 +1,18 @@
+{
+  "skill_id": "ovos-skill-number-facts.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-number-facts",
+  "name": "Getallen",
+  "description": "Weetjes over getallen",
+  "examples": [
+    "wiskundig feit over het getal 7",
+    "feit over het getal 666",
+    "willekeurig weetje over getallen",
+    "feit over gisteren",
+    "weetje over het jaar 1992",
+    "weetje over volgende week",
+    "weetje over morgen"
+  ],
+  "tags": [
+    "Weetjes"
+  ]
+}

@@ -1,0 +1,3 @@
+[geef me] (een feit|een weetje|trivia) (over vandaag|over morgen|over gisteren|over dit weekend)
+(weetje|feit) (over de datum|over de dag) {date}
+(weetje|feit) (over januari|over februari|over maart|over april|over mei|over juni|over juli|over augustus|over september|over oktober|over november|over december) {date}

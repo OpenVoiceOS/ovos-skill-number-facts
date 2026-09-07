@@ -1,0 +1,3 @@
+[me diga] (uma curiosidade|um fato) (de hoje|de amanhã|de ontem|do fim de semana)
+(curiosidade|fato) (da data|do dia) {date}
+(curiosidade|fato) (de janeiro|de fevereiro|de março|de abril|de maio|de junho|de julho|de agosto|de setembro|de outubro|de novembro|de dezembro) {date}
