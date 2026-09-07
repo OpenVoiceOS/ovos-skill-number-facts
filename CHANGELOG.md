@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.0a1](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.2.0a1) (2026-09-07)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.15a1...0.2.0a1)
+
+**Merged pull requests:**
+
+- feat: pt-BR, it-IT, nl-NL, sv-SE locale parity [\#87](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/87) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.15a1](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.15a1) (2026-09-02)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.14a3...0.1.15a1)
