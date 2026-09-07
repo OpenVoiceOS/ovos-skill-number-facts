@@ -1,0 +1,3 @@
+[digas-me] (una curiositat|un fach|una anecdòta) (d'uèi|de deman|d'ièr|de la dimenjada|d'aquela setmana)
+(curiositat|fach) (de la data|del jorn) {date}
+(curiositat|fach) (de genièr|de febrièr|de març|d'abril|de mai|de junh|de julhet|d'agost|de setembre|d'octòbre|de novembre|de decembre) {date}
