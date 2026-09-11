@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.1a1](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.3.1a1) (2026-09-11)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.3.0a2...0.3.1a1)
+
+**Merged pull requests:**
+
+- fix: guard against False/None sentinels from extract\_number/extract\_datetime [\#93](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/93) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+- translate\(da-DK\): add missing no.number.found.dialog, fix typo, fill coverage gaps [\#92](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/92) ([andlo](https://github.com/andlo))
+
 ## [0.3.0a2](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.3.0a2) (2026-09-07)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.3.0a1...0.3.0a2)
