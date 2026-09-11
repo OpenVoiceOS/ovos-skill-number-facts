@@ -1,2 +1,4 @@
-[give me] [a] (fact|trivia|curiosity) about [the] year {year}
+[(give me|tell me)] [a] (fact|trivia|curiosity) about [the] year {year}
 year (fact|trivia) {year}
+[(give me|tell me)] [a] [random] (fact|trivia|curiosity) about [a] year
+[(give me|tell me)] [a] [random] year (fact|trivia|curiosity)
