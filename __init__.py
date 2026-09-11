@@ -47,7 +47,7 @@ class NumbersSkill(OVOSSkill):
         number = None
         if not random:
             number = extract_number(message.data["utterance"], lang=self.lang)
-        if number is not None:
+        if number is not None and number is not False:
             self.speak(number_trivia(number))
         else:
             if not random:
@@ -60,7 +60,7 @@ class NumbersSkill(OVOSSkill):
         number = None
         if not random:
             number = extract_number(message.data["utterance"], lang=self.lang)
-        if number:
+        if number is not None and number is not False:
             self.speak(number_math(number))
         else:
             self.speak(random_math())
@@ -71,9 +71,10 @@ class NumbersSkill(OVOSSkill):
         date = None
         if not random:
             date = extract_datetime(message.data["utterance"], anchorDate=now_local(), lang=self.lang)
-            self.log.info("extracted date: " + str(date[0]))
-            self.log.info("utterance remainder: " + str(date[1]))
-            date = date[0]
+            if date:
+                self.log.info("extracted date: " + str(date[0]))
+                self.log.info("utterance remainder: " + str(date[1]))
+            date = date[0] if date else None
 
         if date:
             self.speak(date_trivia(date.month, date.day))
@@ -87,19 +88,15 @@ class NumbersSkill(OVOSSkill):
         if not random:
             number = extract_number(message.data["utterance"], lang=self.lang)
 
-        if number:
+        if number is not None and number is not False:
             self.speak(year_trivia(number))
         else:
             self.speak(random_year())
 
 
 if __name__ == "__main__":
-    from ovos_config.locale import setup_locale
     from ovos_utils.fakebus import FakeBus
     from ovos_bus_client.message import Message
-
-    setup_locale()
-
 
     # print speak for debugging
     def spk(utt, *args, **kwargs):
