@@ -51,7 +51,7 @@ class NumbersSkill(OVOSSkill):
             self.speak(number_trivia(number))
         else:
             if not random:
-                self.speak_dialog("no.number.found")
+                self.speak_dialog("no_number_found")
             self.speak(random_trivia())
 
     @intent_handler("math_trivia.intent")
