@@ -34,7 +34,7 @@ class TestFalsySentinelGuards(unittest.TestCase):
     @patch.object(_skill_module, "number_trivia", lambda n: "NUMBER_FACT")
     def test_extract_number_false_speaks_no_number_found(self):
         """extract_number's real failure sentinel is False, not None. The
-        guard must speak the 'no.number.found' dialog on False, exactly as
+        guard must speak the 'no_number_found' dialog on False, exactly as
         it already does on None."""
         skill = self._make_skill()
         with patch.object(_skill_module, "extract_number", lambda *a, **k: False):
@@ -43,7 +43,7 @@ class TestFalsySentinelGuards(unittest.TestCase):
             )
         kinds = [call[0] for call in self.spoken]
         self.assertEqual(kinds, ["speak_dialog", "speak"])
-        self.assertEqual(self.spoken[0][1][0], "no.number.found")
+        self.assertEqual(self.spoken[0][1][0], "no_number_found")
 
     @patch.object(_skill_module, "random_date", lambda: "RANDOM_DATE")
     def test_extract_datetime_none_does_not_raise(self):

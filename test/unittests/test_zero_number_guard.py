@@ -36,7 +36,7 @@ class TestZeroNumberGuard(unittest.TestCase):
     @patch.object(_skill_module, "number_trivia", lambda n: f"FACT_ABOUT_{n}")
     def test_extract_number_zero_speaks_number_trivia(self):
         """extract_number('fact about the number zero') returns 0. The
-        skill must speak a fact about 0, not fall back to no.number.found."""
+        skill must speak a fact about 0, not fall back to no_number_found."""
         skill = self._make_skill()
         with patch.object(_skill_module, "extract_number", lambda *a, **k: 0):
             skill.handle_numbers(

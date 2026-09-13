@@ -40,7 +40,7 @@ class TestNumberTriviaFallbackDialog(unittest.TestCase):
             )
         kinds = [call[0] for call in self.spoken]
         self.assertEqual(kinds, ["speak_dialog", "speak"])
-        self.assertEqual(self.spoken[0][1][0], "no.number.found")
+        self.assertEqual(self.spoken[0][1][0], "no_number_found")
 
     @patch.object(_skill_module, "random_trivia", lambda: "RANDOM_FACT")
     @patch.object(_skill_module, "number_trivia", lambda n: "NUMBER_FACT")
