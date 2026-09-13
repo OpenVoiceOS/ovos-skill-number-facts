@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.1a2](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.3.1a2) (2026-09-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.3.1a1...0.3.1a2)
+
+**Merged pull requests:**
+
+- locale: no.number.found.dialog in 7 locales \(ca-ES, de-DE, es-ES, eu-ES, fr-FR, gl-ES, pt-PT\) [\#96](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/96) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.3.1a1](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.3.1a1) (2026-09-11)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.3.0a2...0.3.1a1)
