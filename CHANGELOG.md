@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.2a2](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.3.2a2) (2026-09-16)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.3.2a1...0.3.2a2)
+
+**Merged pull requests:**
+
+- test: assert effects in number-facts e2e suite, not just routing [\#95](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/95) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.3.2a1](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.3.2a1) (2026-09-13)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.3.1a2...0.3.2a1)
@@ -193,19 +201,19 @@
 
 ## [0.1.12a5](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.12a5) (2025-12-20)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.12a4...0.1.12a5)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.12a3...0.1.12a5)
 
 **Merged pull requests:**
 
 - Configure Renovate [\#33](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/33) ([renovate[bot]](https://github.com/apps/renovate))
 
-## [0.1.12a4](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.12a4) (2025-11-21)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.12a3...0.1.12a4)
-
 ## [0.1.12a3](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.12a3) (2025-11-21)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.12...0.1.12a3)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.12a4...0.1.12a3)
+
+## [0.1.12a4](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.12a4) (2025-11-21)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.12...0.1.12a4)
 
 **Merged pull requests:**
 
