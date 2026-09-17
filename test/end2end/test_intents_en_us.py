@@ -16,8 +16,8 @@ network dependency and stay fast and reproducible.
 
 Beyond routing, these tests assert the *effect*: the spoken line must be one
 the handler could actually have produced for that branch. The
-``no.number.found`` recovery path is checked against the lines shipped in
-``locale/en-US/no.number.found.dialog``, read from disk at test time rather
+``no_number_found`` recovery path is checked against the lines shipped in
+``locale/en-US/no_number_found.dialog``, read from disk at test time rather
 than restated in the test, and that set is asserted disjoint from the fetch
 sentinels so a handler that speaks the wrong line cannot pass by accident.
 A stubbed fetch failure is asserted to reach some spoken recovery and never
@@ -68,13 +68,13 @@ def _dialog_lines(name: str) -> set:
 
 # Read once, directly from the shipped dialog file -- never from a captured
 # bus message -- so this set is independent of the code under test.
-NO_NUMBER_FOUND_LINES = _dialog_lines("no.number.found")
+NO_NUMBER_FOUND_LINES = _dialog_lines("no_number_found")
 
 # The recovery-path dialog must not share a line with any fact sentinel, or a
 # handler that speaks the wrong one would still pass membership checks below.
 for _sentinel in set(_STUBS.values()):
     assert not (NO_NUMBER_FOUND_LINES & {_sentinel}), (
-        f"no.number.found.dialog must be disjoint from fetch sentinel "
+        f"no_number_found.dialog must be disjoint from fetch sentinel "
         f"{_sentinel!r}, got overlap"
     )
 
@@ -150,13 +150,13 @@ class TestNumberTrivia(_TriviaRoutingMixin, TestCase):
 
     def test_no_number_speaks_no_number_found_dialog(self):
         """An utterance with no extractable number must speak a line drawn
-        from ``no.number.found.dialog`` on the way to the random fallback,
+        from ``no_number_found.dialog`` on the way to the random fallback,
         not merely any spoken response."""
         messages = self._capture("give me a fact about numbers")
         spoken = self._spoken(messages)
         self.assertTrue(
             any(utt in NO_NUMBER_FOUND_LINES for utt in spoken),
-            f"expected one of no.number.found.dialog's own lines to be "
+            f"expected one of no_number_found.dialog's own lines to be "
             f"spoken, got {spoken!r}",
         )
 
@@ -167,7 +167,7 @@ class TestNumberTrivia(_TriviaRoutingMixin, TestCase):
         spoken = self._spoken(messages)
         self.assertFalse(
             any(utt in NO_NUMBER_FOUND_LINES for utt in spoken),
-            f"no.number.found.dialog must not be spoken when a number was "
+            f"no_number_found.dialog must not be spoken when a number was "
             f"found, got {spoken!r}",
         )
 
