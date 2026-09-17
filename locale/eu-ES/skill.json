@@ -1,0 +1,18 @@
+{
+  "skill_id": "ovos-skill-number-facts.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-number-facts",
+  "name": "Zenbakiak",
+  "description": "Zenbakiei buruzko gertaerak",
+  "examples": [
+    "7 zenbakiari buruzko gertaera matematikoa",
+    "666 zenbakiari buruzko gertaera",
+    "ausazko zenbaki bati buruzko kuriositatea",
+    "atzoko eguna buruzko gertaera",
+    "1992 urteari buruzko kuriositatea",
+    "hurrengo asteari buruzko kuriositateak",
+    "biharari buruzko kuriositateak"
+  ],
+  "tags": [
+    "Kuriositateak"
+  ]
+}
