@@ -29,6 +29,7 @@ for _name, _sentinel in _STUBS.items():
         (lambda sentinel: lambda *args, **kwargs: sentinel)(_sentinel),
     )
 
+
 import json  # noqa: E402
 from pathlib import Path  # noqa: E402
 
@@ -53,6 +54,20 @@ NEGATIVE_UTTERANCES = [
     ("what year is it", "ovos-skill-date-time.openvoiceos"),
     ("tell me a random joke", "ovos-skill-icanhazdadjokes.openvoiceos"),
     ("play a random song", "ovos-skill-music.openvoiceos"),
+]
+
+# sibling-confusion negatives: utterances that should be claimed by ONE
+# specific trivia intent of this skill and must NOT also be claimed by any
+# of its siblings (e.g. a math request should never fall into number_trivia,
+# a year request should never fall into date_trivia, etc).
+SIBLING_NEGATIVES = [
+    # (utterance, correct_label, wrong_labels)
+    ("give me a math fact", "math_trivia", ["number_trivia", "date_trivia", "year_trivia"]),
+    ("fact about the year 1992", "year_trivia", ["number_trivia", "math_trivia", "date_trivia"]),
+    ("fact about december 3", "date_trivia", ["number_trivia", "math_trivia", "year_trivia"]),
+    ("number fact 7", "number_trivia", ["math_trivia", "date_trivia", "year_trivia"]),
+    ("tell me a year fact", "year_trivia", ["number_trivia", "math_trivia", "date_trivia"]),
+    ("tell me a date fact", "date_trivia", ["number_trivia", "math_trivia", "year_trivia"]),
 ]
 
 
@@ -125,3 +140,108 @@ def test_negative_confusable_not_claimed(minicroft, negative):
     types = _types(minicroft, text, f"negative-{text}")
     claimed = any(t.startswith(f"{SKILL_ID}:") for t in types)
     assert not claimed, f"{text!r} (from {source_skill}) was incorrectly claimed by {SKILL_ID}"
+
+
+@pytest.mark.timeout(60)
+@pytest.mark.parametrize("case", SIBLING_NEGATIVES, ids=lambda c: c[0])
+def test_sibling_intent_not_confused(minicroft, case):
+    """A trivia utterance must route to exactly its own intent, never to one
+    of the skill's other three trivia intents (e.g. a year request must not
+    be claimed by number_trivia/math_trivia/date_trivia)."""
+    text, correct_label, wrong_labels = case
+    types = _types(minicroft, text, f"sibling-{text}")
+    correct = _candidates(SKILL_ID, correct_label)
+    assert any(t in correct for t in types), (
+        f"{text!r}: expected one of {sorted(correct)!r}, got {types!r}"
+    )
+    for wrong_label in wrong_labels:
+        wrong = _candidates(SKILL_ID, wrong_label)
+        assert not any(t in wrong for t in types), (
+            f"{text!r}: incorrectly also claimed by sibling intent {wrong_label!r} ({types!r})"
+        )
+
+
+@pytest.mark.timeout(60)
+@pytest.mark.parametrize(
+    "utterance,handler_name,number",
+    [
+        ("give me a fact about the number 42", "number_trivia", "42"),
+        ("give me a trivia about the number 256", "number_trivia", "256"),
+        ("tell me a curiosity about number 15", "number_trivia", "15"),
+        ("number fact 7", "number_trivia", "7"),
+        ("give me a math fact about the number 7", "number_math", "7"),
+        ("tell me a math trivia about 12", "number_math", "12"),
+        ("fact about the year 1992", "year_trivia", "1992"),
+        ("year fact 2001", "year_trivia", "2001"),
+        ("tell me a fact about the year 2020", "year_trivia", "2020"),
+    ],
+    ids=lambda v: v if isinstance(v, str) else None,
+)
+def test_number_slot_is_actually_extracted(minicroft, utterance, handler_name, number):
+    """Prove the {number}/{year} slot text is not just matched by the
+    template but actually reaches the fact-fetcher with the right value --
+    a template that matches the intent but drops/garbles the slot is just as
+    broken as one that never matches at all."""
+    original = getattr(_skill_module, handler_name)
+    captured = []
+
+    def _echo(n):
+        captured.append(n)
+        return f"ECHO:{n}"
+
+    setattr(_skill_module, handler_name, _echo)
+    try:
+        session = Session(f"slot-{utterance}")
+        session.lang = LANG
+        session.pipeline = PADACIOSO_PIPELINE
+        msg = Message(
+            "recognizer_loop:utterance",
+            {"utterances": [utterance], "lang": LANG},
+            {"session": session.serialize(), "source": "A", "destination": "B"},
+        )
+        capture = CaptureSession(minicroft)
+        capture.capture(msg, timeout=30)
+        messages = capture.finish()
+    finally:
+        setattr(_skill_module, handler_name, original)
+
+    spoken = [m.data.get("utterance", "") for m in messages if m.msg_type in ("speak", "ovos.utterance.speak")]
+    assert captured, f"{utterance!r}: fact-fetcher {handler_name!r} was never called (number not extracted)"
+    assert str(captured[0]) == str(int(number)) or str(captured[0]) == number, (
+        f"{utterance!r}: expected extracted number {number!r}, got {captured!r}"
+    )
+    assert any(f"ECHO:{captured[0]}" in utt for utt in spoken), (
+        f"{utterance!r}: extracted number {captured[0]!r} did not reach the spoken response ({spoken!r})"
+    )
+
+
+@pytest.mark.timeout(60)
+def test_date_slot_is_actually_extracted(minicroft):
+    """Same slot-extraction proof as above, for the two-argument date_trivia
+    fetcher ({date} + explicit month)."""
+    original = _skill_module.date_trivia
+    captured = []
+
+    def _echo(month, day):
+        captured.append((month, day))
+        return f"ECHO:{month}:{day}"
+
+    setattr(_skill_module, "date_trivia", _echo)
+    try:
+        session = Session("slot-date-trivia")
+        session.lang = LANG
+        session.pipeline = PADACIOSO_PIPELINE
+        msg = Message(
+            "recognizer_loop:utterance",
+            {"utterances": ["fact about december 3"], "lang": LANG},
+            {"session": session.serialize(), "source": "A", "destination": "B"},
+        )
+        capture = CaptureSession(minicroft)
+        capture.capture(msg, timeout=30)
+        messages = capture.finish()
+    finally:
+        setattr(_skill_module, "date_trivia", original)
+
+    spoken = [m.data.get("utterance", "") for m in messages if m.msg_type in ("speak", "ovos.utterance.speak")]
+    assert captured == [(12, 3)], f"expected month=12 day=3 to be extracted, got {captured!r}"
+    assert any("ECHO:12:3" in utt for utt in spoken)
