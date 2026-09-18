@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.3a2](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.3.3a2) (2026-09-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.3.3a1...0.3.3a2)
+
+**Merged pull requests:**
+
+- Add m2v-multilingual test gate to end2end suite [\#86](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/86) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.3a1](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.3.3a1) (2026-09-17)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.3.2a3...0.3.3a1)
