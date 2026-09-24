@@ -1,2 +1,4 @@
-[give me] [a] (math|mathematical|mathematics) (fact|trivia|curiosity)
-[tell me] a (fact|curiosity) about (math|mathematics)
+[(give me|tell me)] [a] [random] (math|mathematical|mathematics) (fact|trivia|curiosity)
+[(give me|tell me)] [a] (fact|curiosity) about (math|mathematics)
+[(give me|tell me)] [a] (math|mathematical|mathematics) (fact|trivia|curiosity) about [the] [number] {number}
+[(give me|tell me)] [a] (fact|curiosity) about (math|mathematics) (and|for) [the] number {number}
