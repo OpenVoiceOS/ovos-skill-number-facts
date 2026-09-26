@@ -32,9 +32,15 @@ Unlike ovos-skill-alerts' shared-MiniCroft-with-secondary-langs approach
 (blocked by ovoscope#179 at multi-locale scale), this suite follows the
 ovos-skill-date-time per-locale pattern (test/end2end/test_intents_it_it.py
 on that repo's dev branch): one MiniCroft is booted per locale, in turn,
-torn down when the module's tests finish. Only the pure-Python, swig-free
-padacioso template engine is booted (no padatious training phase, so no
-"mycroft.skills.trained" wait across many locales).
+torn down when the module's tests finish.
+
+PIPELINE names ovos-padatious-pipeline-plugin-high first, so padatious does
+match here and it does train: the earlier claim that only padacioso boots and
+that there is no training phase was wrong. get_minicroft defaults to
+wait_for_trained=True, and that wait reads the trainer's own state rather
+than the bus -- "mycroft.skills.trained" is a private readiness signal and
+not a spec topic. The padacioso tiers below it serve a locale padatious
+declines.
 """
 import ovos_skill_number_facts as _skill_module
 
