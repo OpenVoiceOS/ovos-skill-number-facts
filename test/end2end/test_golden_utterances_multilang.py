@@ -114,8 +114,7 @@ def _load_rows(lang):
 
 ALL_ROWS = []
 for _lang in LANGS:
-    for _row in _load_rows(_lang):
-        ALL_ROWS.append(_row)
+    ALL_ROWS.extend(_load_rows(_lang))
 
 
 def _golden_id(row):

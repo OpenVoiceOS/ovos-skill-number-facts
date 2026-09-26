@@ -15,7 +15,8 @@ ovoscope job red: twelve failures in `test_intent_files_padacioso.py` and
 This pins the ordering itself, so the class is caught here rather than as a
 cross-file mystery.
 """
-import pytest
+import contextlib
+
 from ovos_bus_client.session import SessionManager
 from ovoscope import get_minicroft
 
@@ -43,10 +44,10 @@ def _lang_after_stopping(reverse):
         return original, SessionManager.default_session.lang
     finally:
         for mc in crofts:
-            try:
+            # A croft the loop above already stopped raises here; the
+            # cleanup must still reach the ones it did not.
+            with contextlib.suppress(Exception):
                 mc.stop()
-            except Exception:
-                pass
         SessionManager.default_session.lang = original
 
 
