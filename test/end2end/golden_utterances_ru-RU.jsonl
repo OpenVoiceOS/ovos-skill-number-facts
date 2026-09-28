@@ -1,0 +1,3 @@
+{"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "Факт о количестве 42", "lang": "ru-RU", "intent_label": "number_trivia.intent", "intent_type": "padacioso", "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "Факт о математике", "lang": "ru-RU", "intent_label": "math_trivia.intent", "intent_type": "padacioso", "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "Факт о году 1990", "lang": "ru-RU", "intent_label": "year_trivia.intent", "intent_type": "padacioso", "needs_manual": false, "machine_generated": true}

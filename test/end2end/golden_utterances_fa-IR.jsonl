@@ -1,0 +1,3 @@
+{"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "حقایق مربوط به تعداد 42", "lang": "fa-IR", "intent_label": "number_trivia.intent", "intent_type": "padacioso", "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "حقایق درباره ریاضیات", "lang": "fa-IR", "intent_label": "math_trivia.intent", "intent_type": "padacioso", "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "واقعیت در مورد سال 1990", "lang": "fa-IR", "intent_label": "year_trivia.intent", "intent_type": "padacioso", "needs_manual": false, "machine_generated": true}
