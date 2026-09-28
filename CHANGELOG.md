@@ -1,6 +1,14 @@
 # Changelog
 
-## [0.4.0a1](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.4.0a1) (2026-09-24)
+## [0.5.0a1](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.5.0a1) (2026-09-28)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.4.0a1...0.5.0a1)
+
+**Merged pull requests:**
+
+- feat\(locale\): draft es-CO from es-ES \(copy, unvouched\) [\#117](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/117) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.4.0a1](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.4.0a1) (2026-09-23)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.3.3a6...0.4.0a1)
 
@@ -453,10 +461,6 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.3...0.1.4a1)
 
-**Merged pull requests:**
-
-- fix: skill json [\#11](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/11) ([JarbasAl](https://github.com/JarbasAl))
-
 ## [0.1.3](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.3) (2024-11-11)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/V0.1.3...0.1.3)
@@ -464,10 +468,6 @@
 ## [V0.1.3](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/V0.1.3) (2024-11-11)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.3a1...V0.1.3)
-
-**Merged pull requests:**
-
-- fix: drop lingua-franca [\#10](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/10) ([JarbasAl](https://github.com/JarbasAl))
 
 ## [0.1.3a1](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.3a1) (2024-11-02)
 
