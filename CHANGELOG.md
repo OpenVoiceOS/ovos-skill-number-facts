@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.0a4](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.5.0a4) (2026-09-28)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.5.0a3...0.5.0a4)
+
+**Merged pull requests:**
+
+- test: multilang runner reads its locales from the golden files on disk [\#122](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/122) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.5.0a3](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.5.0a3) (2026-09-28)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.5.0a2...0.5.0a3)
@@ -417,10 +425,6 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.6...0.1.7a1)
 
-**Merged pull requests:**
-
-- da-dk/translate [\#17](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/17) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-
 ## [0.1.6](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.6) (2024-11-23)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/V0.1.6...0.1.6)
@@ -428,10 +432,6 @@
 ## [V0.1.6](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/V0.1.6) (2024-11-23)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.6a1...V0.1.6)
-
-**Merged pull requests:**
-
-- Release 0.1.6a1 [\#16](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/16) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 ## [0.1.6a1](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.6a1) (2024-11-23)
 
