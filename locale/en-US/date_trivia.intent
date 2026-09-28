@@ -1,3 +1,5 @@
-[give me] [a] (fact|trivia|curiosity) (about|for) (today|tomorrow|yesterday|this (day|date|week|weekend))
-[give me] [a] (fact|trivia|curiosity) (about|for) [the] (date|day) {date}
-(fact|trivia) (about|for) (january|february|march|april|may|june|july|august|september|october|november|december) {date}
+[(give me|tell me)] [a] (fact|trivia|curiosity) (about|for) (today|tomorrow|yesterday|this (day|date|week|weekend))
+[(give me|tell me)] [a] (fact|trivia|curiosity) (about|for) [the] (date|day) {date}
+[(give me|tell me)] [a] (fact|trivia) (about|for) (january|february|march|april|may|june|july|august|september|october|november|december) {date}
+[(give me|tell me)] [a] [random] (fact|trivia|curiosity) about [a] date
+[(give me|tell me)] [a] [random] date (fact|trivia|curiosity)
