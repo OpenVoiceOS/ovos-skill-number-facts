@@ -1,0 +1,15 @@
+{
+  "skill_id": "ovos-skill-number-facts.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-number-facts",
+  "name": "Numbers",
+  "description": "Facts about numbers",
+  "examples": [
+    "fakt na dziś",
+    "fakt matematyki",
+    "fakt liczby",
+    "fakt w roku rok"
+  ],
+  "tags": [
+    "Trivia"
+  ]
+}
