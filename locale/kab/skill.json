@@ -1,0 +1,17 @@
+{
+  "skill_id": "ovos-skill-number-facts.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-number-facts",
+  "name": "Imḍanen",
+  "description": "Tiqsiḍin ɣef yimḍanen",
+  "examples": [
+    "taqsiṭ ɣef umḍan 666",
+    "taqsiṭ n yimḍanen",
+    "taqsiṭ n yiḍelli",
+    "taqsiṭ n useggas 1992",
+    "tadyant n taggara n dduṛt-a",
+    "tadyant n uzekka"
+  ],
+  "tags": [
+    "Tiqsiḍin"
+  ]
+}
