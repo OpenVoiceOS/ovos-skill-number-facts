@@ -8,3 +8,5 @@
 {"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "curiosidade de xaneiro march 3rd", "lang": "gl-ES", "intent_label": "date_trivia.intent", "intent_type": "padacioso", "needs_manual": false, "machine_generated": false}
 {"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "dime unha curiosidade do ano 1990", "lang": "gl-ES", "intent_label": "year_trivia.intent", "intent_type": "padacioso", "needs_manual": false, "machine_generated": false}
 {"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "un feito sobre o ano 1990", "lang": "gl-ES", "intent_label": "year_trivia.intent", "intent_type": "padacioso", "needs_manual": false, "machine_generated": false}
+{"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "dime un feito de matemáticas", "lang": "gl-ES", "intent_label": "math_trivia.intent", "intent_type": "padacioso", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "dime un feito sobre o ano 1984", "lang": "gl-ES", "intent_label": "year_trivia.intent", "intent_type": "padacioso", "needs_manual": true, "machine_generated": true}
