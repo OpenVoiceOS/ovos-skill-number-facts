@@ -9,3 +9,4 @@
 {"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "fait de janvier march 3rd", "lang": "fr-FR", "intent_label": "date_trivia.intent", "intent_type": "padacioso", "needs_manual": false, "machine_generated": false}
 {"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "donne-moi un fait sur l'année 1990", "lang": "fr-FR", "intent_label": "year_trivia.intent", "intent_type": "padacioso", "needs_manual": false, "machine_generated": false}
 {"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "une anecdote sur l'année 1990", "lang": "fr-FR", "intent_label": "year_trivia.intent", "intent_type": "padacioso", "needs_manual": false, "machine_generated": false}
+{"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "un fait sur l'année 1984", "lang": "fr-FR", "intent_label": "year_trivia.intent", "intent_type": "padacioso", "needs_manual": true, "machine_generated": true}
