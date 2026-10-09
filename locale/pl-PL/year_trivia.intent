@@ -1,5 +1,7 @@
-fakt około rok {year}
-trzywistość około rok {year}
-ciekawość na rok {year}
+fakt o roku {year}
+ciekawostka o roku {year}
+ciekawostka na rok {year}
 fakt w roku {year}
-trwania w ciągu roku {year}
+co się działo w roku {year}
+(powiedz|opowiedz) mi (ciekawostkę|coś ciekawego|fakt) o roku {year}
+co (się wydarzyło|się stało|ciekawego wydarzyło się) w roku {year}

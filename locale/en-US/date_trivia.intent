@@ -1,3 +1,7 @@
 [give me] [a] (fact|trivia|curiosity) (about|for) (today|tomorrow|yesterday|this (day|date|week|weekend))
 [give me] [a] (fact|trivia|curiosity) (about|for) [the] (date|day) {date}
 (fact|trivia) (about|for) (january|february|march|april|may|june|july|august|september|october|november|december) {date}
+(tell me|say) something (interesting|fun) about (january|february|march|april|may|june|july|august|september|october|november|december) {date}
+what happened on (january|february|march|april|may|june|july|august|september|october|november|december) {date}
+what happened on this (day|date) in history
+what is special about (today|tomorrow|yesterday)

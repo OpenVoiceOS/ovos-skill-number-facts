@@ -1,3 +1,7 @@
 [geef me] (een feit|een weetje|trivia) (over vandaag|over morgen|over gisteren|over dit weekend)
 (weetje|feit) (over de datum|over de dag) {date}
 (weetje|feit) (over januari|over februari|over maart|over april|over mei|over juni|over juli|over augustus|over september|over oktober|over november|over december) {date}
+(vertel me|geef me) een (weetje|feitje) over {date} (januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december)
+wat (is er gebeurd|gebeurde er) op {date} (januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december)
+wat is er (op deze dag|vandaag) in de geschiedenis gebeurd
+wat is er speciaal aan (vandaag|morgen|deze dag)

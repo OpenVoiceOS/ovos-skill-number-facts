@@ -2,3 +2,6 @@
 [dimmi] una curiosità [a caso] sui numeri
 (curiosità|fatto) [a caso] sul numero {number}
 curiosità sui numeri
+(raccontami|dimmi) (una curiosità|qualcosa di interessante|un fatto curioso) sul numero {number}
+(sai|conosci) qualcosa (di interessante|di curioso) sul numero {number}
+(cosa|che cosa) sai sul numero {number}

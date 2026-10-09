@@ -2,3 +2,7 @@
 [eine] [zufällige] Zahlen (Tatsache|Trivia)
 Wissenswertes über Zahlen
 [nenne mir] (eine Tatsache|Wissenswertes) über Zahlen
+erzähl mir etwas (Interessantes|Spannendes|Lustiges) über die Zahl {number}
+was weißt du über die Zahl {number}
+weißt du (etwas Interessantes|eine Tatsache) über die Zahl {number}
+was ist (besonders|interessant) an der Zahl {number}

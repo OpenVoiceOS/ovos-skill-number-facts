@@ -1,3 +1,11 @@
 [dime] (una curiosidad|un hecho) (de hoy|de mañana|de ayer|del fin de semana)
 (curiosidad|hecho) (de la fecha|del día) {date}
 (curiosidad|hecho) (de enero|de febrero|de marzo|de abril|de mayo|de junio|de julio|de agosto|de septiembre|de octubre|de noviembre|de diciembre) {date}
+(cuéntame|dime) (algo curioso|un dato curioso|una curiosidad) (sobre el|del) {date} de (enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)
+qué (pasó|ocurrió|sucedió) el {date} de (enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)
+qué (ocurrió|sucedió) (un día como hoy|en un día como hoy) [en la historia]
+(cuéntame|dime) algo que (pasó|ocurrió) (un día como hoy|tal día como hoy)
+(algún|un) dato (curioso|interesante) (de|sobre) (hoy|mañana|ayer)
+(cuéntame|dime) (alguna curiosidad|algo interesante) (de hoy|de ayer|de mañana)
+qué tiene (hoy|mañana|este día) de especial
+qué (sabes|conoces) sobre el {date} de (enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)

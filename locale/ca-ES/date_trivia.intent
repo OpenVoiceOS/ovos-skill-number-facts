@@ -1,3 +1,6 @@
 [digues-me] (una curiositat|un fet) (d'avui|de demà|d'ahir|del cap de setmana)
 (curiositat|fet) (de la data|del dia) {date}
 (curiositat|fet) (de gener|de febrer|de març|d'abril|de maig|de juny|de juliol|d'agost|de setembre|d'octubre|de novembre|de desembre) {date}
+(explica'm|digues-me) (una curiositat|alguna cosa curiosa) (sobre el|del) {date} (de gener|de febrer|de març|d'abril|de maig|de juny|de juliol|d'agost|de setembre|d'octubre|de novembre|de desembre)
+què (va passar|ha passat) tal dia com avui [a la història]
+què té d'especial (avui|demà|aquest dia)

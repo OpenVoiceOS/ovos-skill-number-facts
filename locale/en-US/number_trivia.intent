@@ -2,3 +2,6 @@
 [tell me] [a] [random] number (fact|trivia|curiosity)
 number (fact|trivia) {number}
 [give me] [a] (fact|trivia|curiosity) about numbers
+(tell me|say) something (interesting|fun|cool) about the number {number}
+what is (an interesting|a fun) fact about the number {number}
+share something (cool|interesting) about numbers

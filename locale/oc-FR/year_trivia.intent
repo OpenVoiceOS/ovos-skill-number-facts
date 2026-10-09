@@ -1,2 +1,12 @@
 [digas-me] (una curiositat|un fach|una anecdòta) (de l'an|sus l'an) {year}
 (curiositat|fach) de l'an {year}
+(conta-me|digas-me) (una curiositat|un fach|quicòm) sus l'annada {year}
+qué se passèt en l'an {year}
+un fach (sus l'an|de l'annada) {year}
+(curiositat|fach|anecdòta) (de l'an|sus l'an|de l'annada) {year}
+(conta-me|digas-me|dona-me) (una curiositat|un fach|una anecdòta|quicòm) (de l'an|sus l'an|de l'annada) {year}
+(un fach|una curiositat|una anecdòta) (de|sus) l'an {year}
+en l'an {year} qué se passèt
+qué (coneisses|sabes) sus l'an {year}
+qué (se passèt|arribèt) pendent l'annada {year}
+quins eveniments (marquèron|se passèron) en l'an {year}

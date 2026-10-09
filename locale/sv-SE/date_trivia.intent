@@ -1,3 +1,8 @@
 [ge mig] (ett fakta|en kuriosa|trivia) (om idag|om imorgon|om igår|om helgen)
 (kuriosa|fakta) (om datumet|om dagen) {date}
 (kuriosa|fakta) (om januari|om februari|om mars|om april|om maj|om juni|om juli|om augusti|om september|om oktober|om november|om december) {date}
+berätta en kuriosa om den {date} (januari|februari|mars|april|maj|juni|juli|augusti|september|oktober|november|december)
+vad hände den {date} (januari|februari|mars|april|maj|juni|juli|augusti|september|oktober|november|december)
+vad hände (på den här dagen|på dagens datum) [i historien]
+vad är det speciella med (idag|imorgon|den här dagen)
+vad kan du berätta om den {date} (januari|februari|mars|april|maj|juni|juli|augusti|september|oktober|november|december)

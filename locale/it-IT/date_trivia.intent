@@ -1,3 +1,9 @@
 [dimmi] (una curiosità|un fatto) (di oggi|di domani|di ieri|del fine settimana)
 (curiosità|fatto) (sulla data|sul giorno) {date}
 (curiosità|fatto) (di gennaio|di febbraio|di marzo|di aprile|di maggio|di giugno|di luglio|di agosto|di settembre|di ottobre|di novembre|di dicembre) {date}
+(raccontami|dimmi) (una curiosità|qualcosa) sul {date} (gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre)
+cosa (è successo|accadde) il {date} (gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre)
+che cosa è (successo|accaduto) (in un giorno come oggi|oggi nella storia)
+raccontami qualcosa di curioso (su oggi|su domani|su ieri)
+che cosa ha di speciale (oggi|domani|questo giorno)
+cosa sai sul {date} (gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre)

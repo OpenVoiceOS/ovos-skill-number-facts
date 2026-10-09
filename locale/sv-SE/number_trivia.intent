@@ -2,3 +2,8 @@
 [berätta] ett slumpmässigt fakta om nummer
 (kuriosa|fakta) [slumpmässigt] om numret {number}
 fakta om nummer
+berätta något (kul|intressant|roligt) om talet {number}
+vet du något (intressant|kul) om talet {number}
+fakta om talet {number}
+vad kan du berätta om talet {number}
+vad är (speciellt|intressant) med talet {number}

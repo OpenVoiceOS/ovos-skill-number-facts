@@ -2,3 +2,5 @@
 [vertel me] een willekeurig weetje over getallen
 (weetje|feit) [willekeurig] over het getal {number}
 weetje over getallen
+(vertel me|zeg) iets (leuks|interessants|grappigs) over het getal {number}
+(weet jij|ken jij) een (feitje|weetje) over het getal {number}
