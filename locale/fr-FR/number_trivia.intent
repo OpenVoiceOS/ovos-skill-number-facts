@@ -2,3 +2,6 @@
 (fait|anecdote|trivia) [aléatoire] (du|sur le) nombre {number}
 anecdote de[s] nombre[s]
 [donne-moi] (un fait|une anecdote) sur les nombres
+(raconte-moi|dis-moi) (une anecdote|un fait intéressant) sur le nombre {number}
+qu'est-ce qu'il y a de (spécial|intéressant) (avec|dans) le nombre {number}
+le nombre {number} a-t-il une propriété (remarquable|amusante|étonnante)

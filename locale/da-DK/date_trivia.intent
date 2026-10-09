@@ -1,3 +1,7 @@
 [fortæl mig] (fakta|et faktum|trivia) om (i dag|i morgen|i går|weekenden)
 (fakta|et faktum) om (datoen|dagen) {date}
 (fakta|et faktum) om (januar|februar|marts|april|maj|juni|juli|august|september|oktober|november|december) {date}
+hvad (skete der|er der sket) på denne dato [i historien]
+hvad skete der den {date} (januar|februar|marts|april|maj|juni|juli|august|september|oktober|november|december)
+fortæl mig noget om den {date} (januar|februar|marts|april|maj|juni|juli|august|september|oktober|november|december)
+hvad er der særligt ved (i dag|i morgen|denne dag)

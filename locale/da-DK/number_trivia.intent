@@ -2,3 +2,5 @@
 [et] [tilfældigt] tal (faktum|fakta|trivia)
 [fortæl mig] (et faktum|en trivia|fakta) om tal
 tal (faktum|fakta) {number}
+fortæl mig noget (sjovt|interessant|spændende) om tallet {number}
+hvad ved du om tallet {number}

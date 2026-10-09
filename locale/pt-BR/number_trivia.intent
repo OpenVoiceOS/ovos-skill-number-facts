@@ -2,3 +2,7 @@
 [me diga] [uma] curiosidade [aleatória] sobre números
 (curiosidade|fato) [aleatório] (do|sobre o) número {number}
 curiosidade sobre números
+você (sabe|conhece) (algo interessante|alguma curiosidade) sobre o número {number}
+(me conta|me fala) (uma curiosidade|um fato) sobre o número {number}
+o que (há|tem) de (especial|interessante) (no|sobre o) número {number}
+o que (você sabe|sabes) sobre o número {number}

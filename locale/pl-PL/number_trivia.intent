@@ -1,11 +1,13 @@
 fakt o liczbie {number}
 Trivia o liczbie {number}
-ciekawość o numerze {number}
+ciekawostka o liczbie {number}
 fakt liczby
-Liczba z numerem
-ciekawość numerów
+ciekawostka liczbowa
+ciekawostki o liczbach
 fakt liczby {number}
-Liczba z numerem {number}
+ciekawostka liczbowa {number}
 fakt o liczbie
 Trivia o liczbie
-ciekawość o liczbach
+ciekawostka o liczbach
+(powiedz|opowiedz) mi (ciekawostkę|coś ciekawego) o liczbie {number}
+(znasz|czy znasz) (jakiś ciekawy fakt|jakąś ciekawostkę) o liczbie {number}

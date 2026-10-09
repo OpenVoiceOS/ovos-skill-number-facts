@@ -21,7 +21,7 @@ from ovos_bus_client.session import SessionManager
 from ovoscope import get_minicroft
 
 SKILL_ID = "ovos-skill-number-facts.openvoiceos"
-PIPELINE = ["ovos-padatious-pipeline-plugin-high",
+PIPELINE = ["ovos-padacioso-pipeline-plugin-high",
             "ovos-adapt-pipeline-plugin-high"]
 
 
