@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.0a7](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.5.0a7) (2026-10-09)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.5.0a6...0.5.0a7)
+
+**Merged pull requests:**
+
+- test: gate golden utterances on the m2v pipeline in every locale [\#129](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/129) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.5.0a6](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.5.0a6) (2026-10-08)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.5.0a5...0.5.0a6)
@@ -381,10 +389,6 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.9...0.1.10a1)
 
-**Merged pull requests:**
-
-- import galician translations [\#23](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/23) ([JarbasAl](https://github.com/JarbasAl))
-
 ## [0.1.9](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.9) (2024-12-02)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/V0.1.9...0.1.9)
@@ -392,10 +396,6 @@
 ## [V0.1.9](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/V0.1.9) (2024-12-02)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.9a1...V0.1.9)
-
-**Merged pull requests:**
-
-- Release 0.1.9a1 [\#22](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/22) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 ## [0.1.9a1](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.9a1) (2024-12-02)
 
