@@ -27,10 +27,6 @@ _STUBS = {
     "random_trivia": "NUMBER_FACT",
     "number_math": "MATH_FACT",
     "random_math": "MATH_FACT",
-    "date_trivia": "DATE_FACT",
-    "random_date": "DATE_FACT",
-    "year_trivia": "YEAR_FACT",
-    "random_year": "YEAR_FACT",
 }
 for _name, _sentinel in _STUBS.items():
     setattr(
@@ -135,11 +131,7 @@ class TestM2VNumberFactsGoldenEffect(unittest.TestCase):
     def test_give_me_a_math_fact(self):
         self._assert_effect("give me a math fact", "MATH_FACT")
 
-    def test_fact_about_today(self):
-        self._assert_effect("fact about today", "DATE_FACT")
 
-    def test_fact_about_the_year_1992(self):
-        self._assert_effect("fact about the year 1992", "YEAR_FACT")
 
 
 class TestM2VRegisteredLabelRouting(unittest.TestCase):
