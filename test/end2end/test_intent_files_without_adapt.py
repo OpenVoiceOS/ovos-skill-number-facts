@@ -1,15 +1,5 @@
-"""Regression coverage proving number-facts' intents are registered as
-``.intent`` files (padacioso/padatious pipeline) and not only as Adapt
-``IntentBuilder`` requirements.
-
-The four trivia intents were migrated off Adapt onto keyword-free
-``.intent`` templates; this suite drives the padacioso pipeline directly
-(no Adapt pipeline in the mix) to confirm each intent is still reachable
-without Adapt.
-
-Run:
-    uv run pytest test/end2end/test_intent_files_padacioso.py -v
-"""
+"""Each trivia intent routes from its ``.intent`` file, with no Adapt stage
+in the pipeline, and the skill speaks its fact."""
 from unittest import TestCase
 
 import ovos_skill_number_facts as _skill_module
@@ -33,16 +23,17 @@ for _name, _sentinel in _STUBS.items():
 
 from ovos_bus_client.message import Message  # noqa: E402
 from ovos_bus_client.session import Session  # noqa: E402
-from ovoscope import get_minicroft, CaptureSession, PADACIOSO_PIPELINE  # noqa: E402
+from ovoscope import CaptureSession  # noqa: E402
+from ovoscope.routing import PIPELINE, TALLY, get_prototype_minicroft  # noqa: E402
 
 SKILL_ID = "ovos-skill-number-facts.openvoiceos"
 LANG = "en-US"
 
 
 def _session(tag: str) -> Session:
-    session = Session(f"e2e-padacioso-numfacts-{tag}")
+    session = Session(f"e2e-adaptless-numfacts-{tag}")
     session.lang = LANG
-    session.pipeline = PADACIOSO_PIPELINE
+    session.pipeline = list(PIPELINE)
     return session
 
 
@@ -59,7 +50,7 @@ class TestTriviaRoutingWithoutAdapt(TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.minicroft = get_minicroft([SKILL_ID])
+        cls.minicroft = get_prototype_minicroft([SKILL_ID])
 
     @classmethod
     def tearDownClass(cls):
@@ -83,11 +74,7 @@ class TestTriviaRoutingWithoutAdapt(TestCase):
         intent = f"{SKILL_ID}:{intent_label}"
         messages = self._capture(utterance)
         types = [m.msg_type for m in messages]
-        self.assertIn(
-            intent, types,
-            f"expected {intent!r} to be matched for {utterance!r} on the "
-            f"padacioso (adapt-less) pipeline, got {types}",
-        )
+        TALLY.assert_routed(utterance, intent, types)
         spoken = self._spoken(messages)
         self.assertTrue(
             any(sentinel in utt for utt in spoken),

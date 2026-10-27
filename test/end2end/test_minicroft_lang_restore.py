@@ -18,16 +18,13 @@ cross-file mystery.
 import contextlib
 
 from ovos_bus_client.session import SessionManager
-from ovoscope import get_minicroft
+from ovoscope.routing import get_prototype_minicroft
 
 SKILL_ID = "ovos-skill-number-facts.openvoiceos"
-PIPELINE = ["ovos-padacioso-pipeline-plugin-high",
-            "ovos-adapt-pipeline-plugin-high"]
 
 
 def _boot(lang):
-    return get_minicroft([SKILL_ID], max_wait=150, lang=lang,
-                         default_pipeline=PIPELINE)
+    return get_prototype_minicroft([SKILL_ID], max_wait=150, lang=lang)
 
 
 def _lang_after_stopping(reverse):
