@@ -1,8 +1,7 @@
 """End-to-end intent-routing tests for ovos-skill-number-facts (en-US).
 
-These assert *per-utterance* that the padacioso (``.intent`` file) pipeline
-routes an utterance to the right trivia handler and that the skill speaks the
-fact back. They deliberately
+These assert *per-utterance* that an utterance routes to the right trivia
+handler and that the skill speaks the fact back. They deliberately
 use subset assertions over the captured message stream rather than a strict
 full-sequence match: the exact ordered sequence drifts across ovos-core /
 ovoscope releases (e.g. an extra ``ovos.intent.matched`` message, or ``speak``
@@ -53,10 +52,12 @@ for _name, _sentinel in _STUBS.items():
 
 from ovos_bus_client.message import Message  # noqa: E402
 from ovos_bus_client.session import Session  # noqa: E402
-from ovoscope import get_minicroft, CaptureSession, PADACIOSO_PIPELINE  # noqa: E402
+from ovoscope import CaptureSession  # noqa: E402
+from ovoscope.routing import PIPELINE, TALLY, get_prototype_minicroft  # noqa: E402
 
 SKILL_ID = "ovos-skill-number-facts.openvoiceos"
 LANG = "en-US"
+NUMBER_TRIVIA = f"{SKILL_ID}:number_trivia"
 LOCALE_EN_US = Path(__file__).parent.parent.parent / "locale" / "en-US"
 
 
@@ -82,7 +83,7 @@ for _sentinel in set(_STUBS.values()):
 def _session(tag: str) -> Session:
     session = Session(f"e2e-en_us-numfacts-{tag}")
     session.lang = LANG
-    session.pipeline = PADACIOSO_PIPELINE
+    session.pipeline = list(PIPELINE)
     return session
 
 
@@ -99,7 +100,7 @@ class _TriviaRoutingMixin:
 
     @classmethod
     def setUpClass(cls):
-        cls.minicroft = get_minicroft([SKILL_ID])
+        cls.minicroft = get_prototype_minicroft([SKILL_ID])
 
     @classmethod
     def tearDownClass(cls):
@@ -123,11 +124,7 @@ class _TriviaRoutingMixin:
         intent = f"{SKILL_ID}:{intent_label}"
         messages = self._capture(utterance)
         types = [m.msg_type for m in messages]
-        self.assertIn(
-            intent, types,
-            f"expected {intent!r} to be matched for {utterance!r}, "
-            f"got {types}",
-        )
+        TALLY.assert_routed(utterance, intent, types)
         spoken = self._spoken(messages)
         self.assertTrue(
             any(sentinel in utt for utt in spoken),
@@ -153,6 +150,8 @@ class TestNumberTrivia(_TriviaRoutingMixin, TestCase):
         from ``no_number_found.dialog`` on the way to the random fallback,
         not merely any spoken response."""
         messages = self._capture("give me a fact about numbers")
+        TALLY.assert_routed("give me a fact about numbers", NUMBER_TRIVIA,
+                            [m.msg_type for m in messages])
         spoken = self._spoken(messages)
         self.assertTrue(
             any(utt in NO_NUMBER_FOUND_LINES for utt in spoken),
@@ -164,6 +163,7 @@ class TestNumberTrivia(_TriviaRoutingMixin, TestCase):
         """When a number is present in the utterance, the recovery dialog
         for a *missing* number must never be spoken."""
         messages = self._capture("number fact 7")
+        TALLY.assert_routed("number fact 7", NUMBER_TRIVIA, [m.msg_type for m in messages])
         spoken = self._spoken(messages)
         self.assertFalse(
             any(utt in NO_NUMBER_FOUND_LINES for utt in spoken),
@@ -216,7 +216,7 @@ class TestFetchFailureRecovery(TestCase):
             raise RuntimeError("numbersapi.com unreachable")
 
         _skill_module.number_trivia = _raise
-        cls.minicroft = get_minicroft([SKILL_ID])
+        cls.minicroft = get_prototype_minicroft([SKILL_ID])
 
     @classmethod
     def tearDownClass(cls):
@@ -229,6 +229,7 @@ class TestFetchFailureRecovery(TestCase):
         capture = CaptureSession(self.minicroft)
         capture.capture(_utterance("number fact 7", session), timeout=30)
         messages = capture.finish()
+        TALLY.assert_routed("number fact 7", NUMBER_TRIVIA, [m.msg_type for m in messages])
 
         spoken = [
             m.data.get("utterance", "")
