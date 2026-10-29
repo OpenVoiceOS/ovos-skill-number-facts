@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.6.0a1](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.6.0a1) (2026-10-29)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.5.0a8...0.6.0a1)
+
+**Merged pull requests:**
+
+- feat: drop date and year trivia, days-in-history answers them [\#136](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/136) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.5.0a8](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.5.0a8) (2026-10-28)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.5.0a7...0.5.0a8)
@@ -360,10 +368,6 @@
 ## [0.1.12a1](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.12a1) (2025-01-25)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.11...0.1.12a1)
-
-**Merged pull requests:**
-
-- fix automations [\#27](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/27) ([JarbasAl](https://github.com/JarbasAl))
 
 ## [0.1.11](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.11) (2025-01-23)
 
