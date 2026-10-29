@@ -2,4 +2,6 @@
 {"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "tesɛiḍ taqsiṭ ɣef umḍan 42", "lang": "kab", "intent_label": "number_trivia", "needs_manual": true, "machine_generated": true, "rewritten_from": "taqsiṭ menwala n umḍan 42"}
 {"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "bɣiɣ ad sleɣ i teqsiṭ ɣef umḍan", "lang": "kab", "intent_label": "number_trivia", "needs_manual": true, "machine_generated": true, "rewritten_from": "taqsiṭ n umḍan"}
 {"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "ini-yi-d taqsiṭ ɣef umḍan 13", "lang": "kab", "intent_label": "number_trivia", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "taqsiṭ ɣef umḍan 666", "lang": "kab", "intent_label": "number_trivia", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "taqsiṭ n yimḍanen", "lang": "kab", "intent_label": "number_trivia", "needs_manual": true, "machine_generated": true}
 {"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "acu i tessneḍ ɣef umḍan 7", "lang": "kab", "intent_label": "number_trivia", "needs_manual": true, "machine_generated": true}
