@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.6.1a1](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.6.1a1) (2026-10-29)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.6.0a1...0.6.1a1)
+
+**Merged pull requests:**
+
+- fix\(locale\): en-US number and math templates accept "tell me" and a number [\#138](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/138) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+- fix\(locale\): add the kab store manifest from the locale's own intent lines [\#137](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/137) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.6.0a1](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.6.0a1) (2026-10-29)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.5.0a8...0.6.0a1)
@@ -336,10 +345,6 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.12a4...0.1.12a5)
 
-**Merged pull requests:**
-
-- Configure Renovate [\#33](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/33) ([renovate[bot]](https://github.com/apps/renovate))
-
 ## [0.1.12a4](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.12a4) (2025-11-21)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.12a3...0.1.12a4)
@@ -347,11 +352,6 @@
 ## [0.1.12a3](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.12a3) (2025-11-21)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.12...0.1.12a3)
-
-**Merged pull requests:**
-
-- gl-es/translate [\#31](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/31) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- es-es/translate [\#30](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/30) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 ## [0.1.12](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.12) (2025-06-08)
 
