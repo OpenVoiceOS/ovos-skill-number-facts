@@ -58,18 +58,6 @@ class TestZeroNumberGuard(unittest.TestCase):
         self.assertEqual(kinds, ["speak"])
         self.assertEqual(self.spoken[0][1][0], "MATH_0")
 
-    @patch.object(_skill_module, "random_year", lambda: "RANDOM_YEAR")
-    @patch.object(_skill_module, "year_trivia", lambda n: f"YEAR_{n}")
-    def test_extract_number_zero_speaks_year_trivia(self):
-        skill = self._make_skill()
-        with patch.object(_skill_module, "extract_number", lambda *a, **k: 0):
-            skill.handle_year(
-                Message("", {"utterance": "year fact about zero"})
-            )
-        kinds = [call[0] for call in self.spoken]
-        self.assertEqual(kinds, ["speak"])
-        self.assertEqual(self.spoken[0][1][0], "YEAR_0")
-
 
 if __name__ == "__main__":
     unittest.main()

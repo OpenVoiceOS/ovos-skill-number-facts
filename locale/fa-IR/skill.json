@@ -4,10 +4,8 @@
   "name": "Numbers",
   "description": "Facts about numbers",
   "examples": [
-    "حقایق امروز",
     "حقایق ریاضی",
-    "تعداد حقایق",
-    "سال تریوی سال"
+    "تعداد حقایق"
   ],
   "tags": [
     "Trivia"

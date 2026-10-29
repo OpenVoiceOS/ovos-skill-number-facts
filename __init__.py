@@ -1,14 +1,8 @@
 from urllib.request import urlopen
 
-from ovos_date_parser import extract_datetime
 from ovos_number_parser import extract_number
-from ovos_utils.time import now_local
 from ovos_workshop.decorators import intent_handler
 from ovos_workshop.skills import OVOSSkill
-
-
-def year_trivia(n):
-    return urlopen('http://numbersapi.com/%d/year' % n).read().decode("utf-8")
 
 
 def number_trivia(n):
@@ -19,24 +13,12 @@ def number_math(n):
     return urlopen('http://numbersapi.com/%d/math' % n).read().decode("utf-8")
 
 
-def date_trivia(month, day):
-    return urlopen('http://numbersapi.com/%d/%d/date' % (month, day)).read().decode("utf-8")
-
-
 def random_trivia():
     return urlopen('http://numbersapi.com/random/trivia').read().decode("utf-8")
 
 
 def random_math():
     return urlopen('http://numbersapi.com/random/math').read().decode("utf-8")
-
-
-def random_year():
-    return urlopen('http://numbersapi.com/random/year').read().decode("utf-8")
-
-
-def random_date():
-    return urlopen('http://numbersapi.com/random/date').read().decode("utf-8")
 
 
 class NumbersSkill(OVOSSkill):
@@ -65,34 +47,6 @@ class NumbersSkill(OVOSSkill):
         else:
             self.speak(random_math())
 
-    @intent_handler("date_trivia.intent")
-    def handle_date(self, message):
-        random = message.data.get("random")
-        date = None
-        if not random:
-            date = extract_datetime(message.data["utterance"], anchorDate=now_local(), lang=self.lang)
-            if date:
-                self.log.info("extracted date: " + str(date[0]))
-                self.log.info("utterance remainder: " + str(date[1]))
-            date = date[0] if date else None
-
-        if date:
-            self.speak(date_trivia(date.month, date.day))
-        else:
-            self.speak(random_date())
-
-    @intent_handler("year_trivia.intent")
-    def handle_year(self, message):
-        random = message.data.get("random")
-        number = None
-        if not random:
-            number = extract_number(message.data["utterance"], lang=self.lang)
-
-        if number is not None and number is not False:
-            self.speak(year_trivia(number))
-        else:
-            self.speak(random_year())
-
 
 if __name__ == "__main__":
     from ovos_utils.fakebus import FakeBus
@@ -106,7 +60,5 @@ if __name__ == "__main__":
     s = NumbersSkill(skill_id="fake.test", bus=FakeBus())
     s.speak = spk
 
-    s.handle_year(Message("", {"utterance": "fact about the year 1992"}))
-    s.handle_date(Message("", {"utterance": "fact about month of december"}))
     s.handle_math(Message("", {"random": True}))
     s.handle_numbers(Message("", {"utterance": "fact about number six hundred sixty six"}))

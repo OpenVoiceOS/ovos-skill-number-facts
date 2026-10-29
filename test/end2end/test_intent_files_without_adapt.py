@@ -9,10 +9,6 @@ _STUBS = {
     "random_trivia": "NUMBER_FACT",
     "number_math": "MATH_FACT",
     "random_math": "MATH_FACT",
-    "date_trivia": "DATE_FACT",
-    "random_date": "DATE_FACT",
-    "year_trivia": "YEAR_FACT",
-    "random_year": "YEAR_FACT",
 }
 for _name, _sentinel in _STUBS.items():
     setattr(
@@ -88,10 +84,3 @@ class TestTriviaRoutingWithoutAdapt(TestCase):
 
     def test_math_fact(self):
         self.assertRoutesTo("give me a math fact", "math_trivia", "MATH_FACT")
-
-    def test_date_fact(self):
-        self.assertRoutesTo("fact about today", "date_trivia", "DATE_FACT")
-
-    def test_year_fact(self):
-        self.assertRoutesTo(
-            "fact about the year 1969", "year_trivia", "YEAR_FACT")

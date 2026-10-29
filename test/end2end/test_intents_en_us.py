@@ -38,10 +38,6 @@ _STUBS = {
     "random_trivia": "NUMBER_FACT",
     "number_math": "MATH_FACT",
     "random_math": "MATH_FACT",
-    "date_trivia": "DATE_FACT",
-    "random_date": "DATE_FACT",
-    "year_trivia": "YEAR_FACT",
-    "random_year": "YEAR_FACT",
 }
 for _name, _sentinel in _STUBS.items():
     setattr(
@@ -177,20 +173,6 @@ class TestMathTrivia(_TriviaRoutingMixin, TestCase):
 
     def test_math_fact(self):
         self.assertRoutesTo("give me a math fact", "math_trivia", "MATH_FACT")
-
-
-class TestDateTrivia(_TriviaRoutingMixin, TestCase):
-    """date_trivia routing."""
-
-    def test_date_fact(self):
-        self.assertRoutesTo("fact about december 3", "date_trivia", "DATE_FACT")
-
-
-class TestYearTrivia(_TriviaRoutingMixin, TestCase):
-    """year_trivia routing."""
-
-    def test_year_fact(self):
-        self.assertRoutesTo("fact about the year 1992", "year_trivia", "YEAR_FACT")
 
 
 class TestFetchFailureRecovery(TestCase):
