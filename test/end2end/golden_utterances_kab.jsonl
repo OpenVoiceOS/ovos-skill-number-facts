@@ -8,6 +8,8 @@
 {"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "d acu n yineḍruyen i yellan deg useggas 1990", "lang": "kab", "intent_label": "year_trivia", "needs_manual": true, "machine_generated": true, "rewritten_from": "acu d-yeḍran deg useggas 1990"}
 {"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "ḥku-yi-d ayen i d-yeḍran deg 1990", "lang": "kab", "intent_label": "year_trivia", "needs_manual": true, "machine_generated": true, "rewritten_from": "acu i d-yeḍran deg 1990"}
 {"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "ini-yi-d taqsiṭ ɣef umḍan 13", "lang": "kab", "intent_label": "number_trivia", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "taqsiṭ ɣef umḍan 666", "lang": "kab", "intent_label": "number_trivia", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "taqsiṭ n yimḍanen", "lang": "kab", "intent_label": "number_trivia", "needs_manual": true, "machine_generated": true}
 {"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "acu i tessneḍ ɣef umḍan 7", "lang": "kab", "intent_label": "number_trivia", "needs_manual": true, "machine_generated": true}
 {"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "tesɛiḍ kra n tedyant ɣef uzekka", "lang": "kab", "intent_label": "date_trivia", "needs_manual": true, "machine_generated": true}
 {"skill_id": "ovos-skill-number-facts.openvoiceos", "utterance": "acu i d-yeḍran ass am wa", "lang": "kab", "intent_label": "date_trivia", "needs_manual": true, "machine_generated": true}
