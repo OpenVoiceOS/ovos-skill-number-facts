@@ -4,10 +4,8 @@
   "name": "Numbers",
   "description": "Facts about numbers",
   "examples": [
-    "fakt na dziś",
     "fakt matematyki",
-    "fakt liczby",
-    "fakt w roku rok"
+    "fakt liczby"
   ],
   "tags": [
     "Trivia"
