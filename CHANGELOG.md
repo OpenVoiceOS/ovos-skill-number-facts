@@ -1,8 +1,8 @@
 # Changelog
 
-## [0.6.1a1](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.6.1a1) (2026-10-29)
+## [0.6.2a1](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.6.2a1) (2026-10-29)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.6.0a1...0.6.1a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.6.0a1...0.6.2a1)
 
 **Merged pull requests:**
 
