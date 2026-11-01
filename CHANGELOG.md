@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.6.2a3](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.6.2a3) (2026-11-01)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.6.2a2...0.6.2a3)
+
+**Merged pull requests:**
+
+- translate\(kab\): update no\_number\_found.dialog [\#142](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/142) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
 ## [0.6.2a2](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.6.2a2) (2026-11-01)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.6.2a1...0.6.2a2)
@@ -346,10 +354,6 @@
 ## [0.1.12a6](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.12a6) (2025-12-21)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-number-facts/compare/0.1.12a5...0.1.12a6)
-
-**Merged pull requests:**
-
-- Update dependency ovos-workshop to v8 [\#39](https://github.com/OpenVoiceOS/ovos-skill-number-facts/pull/39) ([renovate[bot]](https://github.com/apps/renovate))
 
 ## [0.1.12a5](https://github.com/OpenVoiceOS/ovos-skill-number-facts/tree/0.1.12a5) (2025-12-20)
 
