@@ -1,8 +1,23 @@
+from fractions import Fraction
 from urllib.request import urlopen
 
-from ovos_number_parser import extract_number
+from numtag import tag_numbers
+from numtag.tagger import ARTICLE_CONFIDENCE
 from ovos_workshop.decorators import intent_handler
 from ovos_workshop.skills import OVOSSkill
+
+
+def extract_number(utterance: str, lang: str) -> int | None:
+    """The number the utterance asks about, or None.
+
+    The article in "uma curiosidade" reads as 1 at the article confidence
+    and is no number. Of the other mentions, the highest confidence wins.
+    """
+    mentions = [m for m in tag_numbers(utterance, lang)
+                if m.confidence > ARTICLE_CONFIDENCE]
+    if not mentions:
+        return None
+    return int(Fraction(max(mentions, key=lambda m: m.confidence).value))
 
 
 def number_trivia(n):
