@@ -65,6 +65,10 @@ def test_math_fact_is_about_the_spoken_number(utterance):
     assert (numbers, spoken) == ([12], ["NUMBER_FACT"])
 
 
-def test_an_article_alone_is_no_number():
-    numbers, spoken = ask("handle_numbers", "pt-PT", "diz-me uma curiosidade sobre os números")
+@pytest.mark.parametrize("utterance", [
+    "diz-me uma curiosidade sobre os números",
+    "dá-me um facto sobre os números",
+])
+def test_an_article_alone_is_no_number(utterance):
+    numbers, spoken = ask("handle_numbers", "pt-PT", utterance)
     assert (numbers, spoken) == ([], ["no_number_found", "RANDOM_FACT"])
